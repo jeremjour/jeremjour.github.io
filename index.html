@@ -8,12 +8,12 @@
   <meta name="author" content="Jérém — @jeremjour">
   <meta property="og:title" content="Jérém — Photographie & Nature">
   <meta property="og:description" content="Portfolio photo et vidéo — Drone, nature et paysages. Sud-Ouest, France.">
-  <meta property="og:image" content="photos/espiaube_paysage.jpg">
+  <meta property="og:image" content="espiaube_paysage.jpg">
   <meta property="og:url" content="https://jeremjour.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jérém — Drone & Nature">
-  <meta name="twitter:image" content="photos/espiaube_paysage.jpg">
+  <meta name="twitter:image" content="espiaube_paysage.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <style>
@@ -70,18 +70,14 @@
     .gallery-item img { width: 100%; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
     .gallery-item:hover img { transform: scale(1.03); }
     .gallery-item-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+      position: absolute; inset: 0; background: rgba(17,17,16,0);
       transition: background 0.4s; display: flex; align-items: flex-end; padding: 1rem;
     }
-    .gallery-item:hover .gallery-item-overlay {
-      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0) 100%);
-    }
+    .gallery-item:hover .gallery-item-overlay { background: rgba(17,17,16,0.25); }
     .gallery-label {
-      font-family: 'Oswald', sans-serif; font-weight: 400;
-      font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+      font-family: 'Oswald', sans-serif; font-weight: 300;
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
       color: #fff; opacity: 0; transform: translateY(6px); transition: all 0.3s;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
     .gallery-item:hover .gallery-label { opacity: 1; transform: translateY(0); }
 
@@ -447,20 +443,20 @@
     // ════════════════════════════════════════
     // POUR AJOUTER UNE PHOTO :
     // Ajoutez une ligne dans le tableau photos[] ci-dessous
-    // exemple : { src: "photos/ma-photo.jpg", label: "Mon titre" }
+    // exemple : { src: "ma-photo.jpg", label: "Mon titre" }
     // ════════════════════════════════════════
     const photos = [
-  { src: "photos/chapelle-à-Kotor.jpg", label: "Chapelle à Kotor" },
-  { src: "photos/clocher-de-Perast.jpg", label: "Clocher De Perast" },
-  { src: "photos/île-de-Saint-Georges.jpg", label: "îLe De Saint Georges" },
-  { src: "photos/lac-noir.jpg", label: "Lac Noir" },
-  { src: "photos/notre-dame-du rocher-kotor.jpg", label: "Notre Dame Du Rocher Kotor" },
-  { src: "photos/perast.jpg", label: "Perast" },
-  { src: "photos/port-de-kotor.jpg", label: "Port De Kotor" },
-  { src: "photos/ruelle-de-perast.jpg", label: "Ruelle De Perast" },
-  { src: "photos/vieille-ville-de-kotor-monténégro.jpg", label: "Vieille Ville De Kotor MontéNéGro" },
-  { src: "photos/vue-sur-l'île-de-saint-georges.jpg", label: "Vue Sur L'îLe De Saint Georges" },
-  { src: "photos/vue-sur-perast.jpg", label: "Vue Sur Perast" }
+  { src: "ruelle-de-perast.jpg", label: "Ruelle De Perast" },
+  { src: "perast.jpg", label: "Perast" },
+  { src: "vue-sur-perast.jpg", label: "Vue Sur Perast" },
+  { src: "île-de-Saint-Georges.jpg", label: "îLe De Saint Georges" },
+  { src: "notre-dame-du rocher-kotor.jpg", label: "Notre Dame Du Rocher Kotor" },
+  { src: "clocher-de-Perast.jpg", label: "Clocher De Perast" },
+  { src: "vue-sur-l'île-de-saint-georges.jpg", label: "Vue Sur L'îLe De Saint Georges" },
+  { src: "port-de-kotor.jpg", label: "Port De Kotor" },
+  { src: "chapelle-à-Kotor.jpg", label: "Chapelle à Kotor" },
+  { src: "lac-noir.jpg", label: "Lac Noir" },
+  { src: "vieille-ville-de-kotor-monténégro.jpg", label: "Vieille Ville De Kotor MontéNéGro" }
 ];
 
     // ════════════════════════════════════════
