@@ -463,10 +463,8 @@
     const photos = [
   { src: "photos/ruelle-dans-perast.avif", label: "Ruelle Dans Perast" },
   { src: "photos/notre-dame-du-rocher.avif", label: "Notre Dame Du Rocher" },
-  { src: "photos/ile-saint-george.avif", label: "Ile Saint George" },
-  { src: "photos/ile-saint-georges-kotor.avif", label: "Ile Saint Georges Kotor" },
-  { src: "photos/lac-noir-durmitor.avif", label: "Lac Noir Durmitor" },
-  { src: "photos/barque-du-lac-noir.avif", label: "Barque Du Lac Noir" },
+  { src: "photos/ile-saint-george-montenegro.avif", label: "Ile Saint George Montenegro" },
+  { src: "photos/lac-noir-parc-durmitor.avif", label: "Lac Noir Parc Durmitor" },
   { src: "photos/chapelle.avif", label: "Chapelle" },
   { src: "photos/port-de-kotor.avif", label: "Port De Kotor" },
   { src: "photos/vieille-ville-kotor.avif", label: "Vieille Ville Kotor" },
@@ -629,7 +627,7 @@
           lbWrap.style.transform = '';
           lbWrap.style.opacity = '';
         }));
-      }, 80);
+      }, 50);
     }
 
     function lightboxClickNav(e) {
@@ -703,7 +701,7 @@
     document.getElementById('lightbox').addEventListener('touchend', e => {
       const dx = e.changedTouches[0].clientX - touchStartX;
       const dy = e.changedTouches[0].clientY - touchStartY;
-      const threshold = window.innerWidth * 0.3;
+      const threshold = window.innerWidth * 0.15;
 
       if (swipeAxis === 'y' && dy > 80) {
         // Swipe bas → fermer
@@ -719,7 +717,7 @@
       } else if (swipeAxis === 'x' && Math.abs(dx) > threshold) {
         // Seuil atteint → sortie rapide puis changement
         const dir = dx < 0 ? 1 : -1;
-        lbWrapEl.style.transition = 'transform 0.12s ease, opacity 0.12s ease';
+        lbWrapEl.style.transition = 'transform 0.06s ease, opacity 0.06s ease';
         lbWrapEl.style.transform = `translateX(${dx < 0 ? '-110%' : '110%'})`;
         lbWrapEl.style.opacity = '0';
         setTimeout(() => {
@@ -727,7 +725,7 @@
           lbWrapEl.style.transform = '';
           lbWrapEl.style.opacity = '';
           lightboxNav(dir);
-        }, 120);
+        }, 60);
       } else {
         // Trop court → retour élastique
         lbWrapEl.style.transition = 'transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.2s ease';
