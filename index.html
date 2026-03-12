@@ -235,7 +235,7 @@
     .lightbox {
       position: fixed; inset: 0; background: rgba(255,255,255,0.97);
       z-index: 500; display: none; align-items: center; justify-content: center;
-      flex-direction: row;
+      flex-direction: row; touch-action: none;
     }
     .lightbox.active { display: flex; }
     .lightbox img {
@@ -259,7 +259,7 @@
       max-width: 100%;
       max-height: 90vh;
       object-fit: contain;
-      transition: filter 0.4s ease;
+      transition: filter 0.15s ease;
     }
     .lightbox-img-wrap img.loading { filter: blur(8px); }
 
@@ -627,7 +627,7 @@
           lbWrap.style.transform = '';
           lbWrap.style.opacity = '';
         }));
-      }, 240);
+      }, 150);
     }
 
     function lightboxClickNav(e) {
@@ -676,10 +676,10 @@
     let touchStartX = 0, touchStartY = 0;
 
     function resetLbTransform(animate) {
-      lbWrapEl.style.transition = animate ? 'transform 0.12s ease, opacity 0.12s ease' : '';
+      lbWrapEl.style.transition = animate ? 'transform 0.15s ease, opacity 0.15s ease' : '';
       lbWrapEl.style.transform = '';
       lbWrapEl.style.opacity = '';
-      if (animate) setTimeout(() => lbWrapEl.style.transition = '', 120);
+      if (animate) setTimeout(() => lbWrapEl.style.transition = '', 150);
     }
 
     document.getElementById('lightbox').addEventListener('touchstart', e => {
@@ -714,7 +714,7 @@
         }, 200);
       } else if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
         // Swipe gauche/droite → naviguer
-        lbWrapEl.style.transition = 'transform 0.1s ease, opacity 0.1s ease';
+        lbWrapEl.style.transition = 'transform 0.15s ease, opacity 0.15s ease';
         lbWrapEl.style.transform = `translateX(${dx > 0 ? '100%' : '-100%'})`;
         lbWrapEl.style.opacity = '0';
         setTimeout(() => {
@@ -723,7 +723,7 @@
           lbWrapEl.style.transform = `translateX(${dx > 0 ? '-30%' : '30%'})`;
           lbWrapEl.style.opacity = '0';
           requestAnimationFrame(() => requestAnimationFrame(() => resetLbTransform(true)));
-        }, 100);
+        }, 150);
       } else {
         // Swipe trop court → annuler
         resetLbTransform(true);
