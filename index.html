@@ -65,6 +65,8 @@
     .section-num { font-family: 'Lora', serif; font-style: italic; font-size: 0.75rem; color: var(--muted); }
 
     /* GALERIE PHOTOS */
+    .gallery-coming-soon { display: flex; align-items: center; justify-content: center; min-height: 300px; }
+    .gallery-coming-soon p { font-family: 'Lora', serif; font-style: italic; color: #999; font-size: 1.1rem; letter-spacing: 0.05em; }
     .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
     .gallery-item { position: relative; cursor: pointer; overflow: hidden; aspect-ratio: 4/3; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
@@ -100,7 +102,7 @@
 
     /* VIDÉOS */
     #videos { background: var(--bg); }
-    .video-grid { columns: 3; column-gap: 5px; }
+    .video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
     .video-item { break-inside: avoid; margin-bottom: 5px; position: relative; overflow: hidden; cursor: pointer; width: 100%; }
     .video-item.portrait { aspect-ratio: 9/16; }
     .video-item.landscape { aspect-ratio: 16/9; }
@@ -382,7 +384,8 @@
 
   <!-- VIDÉOS -->
   <section id="videos" class="hidden">
-    <div class="video-grid reveal" id="video-grid">
+    <div class="gallery-coming-soon reveal">
+      <p>Vidéo à venir</p>
     </div>
   </section>
 
@@ -405,12 +408,12 @@
 
       <!-- Adresse mail -->
       <div class="contact-row">
-        <span class="c-label">Contact —</span> <span class="c-val"><a href="mailto:jeremjour.drone@gmail.com">jeremjour.drone@gmail.com</a></span>
+        <span class="c-label">Contact —</span> <span class="c-val"><a href="/cdn-cgi/l/email-protection#107a7562757d7a7f65623e74627f7e7550777d71797c3e737f7d"><span class="__cf_email__" data-cfemail="0a606f786f6760657f78246e7865646f4a6d676b636624696567">[email&#160;protected]</span></a></span>
       </div>
 
       <!-- Icônes -->
       <div class="contact-icons">
-        <a class="contact-icon" href="mailto:jeremjour.drone@gmail.com" title="Email">
+        <a class="contact-icon" href="/cdn-cgi/l/email-protection#503a3522353d3a3f25227e34223f3e3510373d31393c7e333f3d" title="Email">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M2 7l10 7 10-7"/>
@@ -454,7 +457,7 @@
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // POUR AJOUTER UNE PHOTO NATURE :
     // Les photos nature vont dans le dossier photos/ sur GitHub
     // exemple : { src: "photos/nom-photo.avif", label: "Mon titre" }
@@ -751,16 +754,4 @@
       lbWrapEl.style.opacity = '';
 
       if (Math.abs(dy) > Math.abs(dx) && dy > 80) {
-        // Swipe bas → fermer
-        lbWrapEl.classList.add('swipe-down');
-        setTimeout(() => {
-          closeLightbox();
-          lbWrapEl.classList.remove('swipe-down');
-          lbWrapEl.style.transform = '';
-          lbWrapEl.style.opacity = '';
-        }, 300);
-      }
-    });
-  </script>
-</body>
-</html>
+        // Swipe bas 
