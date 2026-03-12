@@ -405,12 +405,12 @@
 
       <!-- Adresse mail -->
       <div class="contact-row">
-        <span class="c-label">Contact —</span> <span class="c-val"><a href="/cdn-cgi/l/email-protection#107a7562757d7a7f65623e74627f7e7550777d71797c3e737f7d"><span class="__cf_email__" data-cfemail="0a606f786f6760657f78246e7865646f4a6d676b636624696567">[email&#160;protected]</span></a></span>
+        <span class="c-label">Contact —</span> <span class="c-val"><a id="email-link-1" href="#">jeremjour.drone@gmail.com</a></span>
       </div>
 
       <!-- Icônes -->
       <div class="contact-icons">
-        <a class="contact-icon" href="/cdn-cgi/l/email-protection#503a3522353d3a3f25227e34223f3e3510373d31393c7e333f3d" title="Email">
+        <a class="contact-icon" id="email-link-2" href="#" title="Email">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M2 7l10 7 10-7"/>
@@ -454,7 +454,18 @@
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Email protection
+    (function() {
+      var u = 'jeremjour.drone';
+      var d = 'gmail.com';
+      var e = u + '@' + d;
+      var m = 'mailto:' + e;
+      var l1 = document.getElementById('email-link-1');
+      var l2 = document.getElementById('email-link-2');
+      if (l1) { l1.href = m; l1.textContent = e; }
+      if (l2) { l2.href = m; }
+    })();
+  </script><script>
     // POUR AJOUTER UNE PHOTO NATURE :
     // Les photos nature vont dans le dossier photos/ sur GitHub
     // exemple : { src: "photos/nom-photo.avif", label: "Mon titre" }
