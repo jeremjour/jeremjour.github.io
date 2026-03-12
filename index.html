@@ -142,7 +142,7 @@
     }
     .contact-hero-bg {
       position: absolute; inset: 0;
-      
+      background-image: url('contact-bg.jpg');
       background-size: cover; background-position: center;
       transition: transform 0.8s ease;
     }
@@ -163,7 +163,7 @@
     }
     .contact-hero-bg {
       position: absolute; inset: 0;
-      
+      background-image: url('contact-bg.jpg');
       background-size: cover; background-position: center;
       transition: transform 0.8s ease;
     }
@@ -355,6 +355,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-R3WFVGB31J');
+  
+    // Email icon link
+    (function() {
+      var l2 = document.getElementById('email-link-2');
+      if (l2) { l2.href = 'mailto:' + 'jeremjour.drone' + '@' + 'gmail.com'; }
+    })();
   </script>
 </head>
 <body>
@@ -449,18 +455,7 @@
     </div>
   </div>
 
-    // Email protection
-    (function() {
-      var u = 'jeremjour.drone';
-      var d = 'gmail.com';
-      var e = u + '@' + d;
-      var m = 'mailto:' + e;
-      var l1 = document.getElementById('email-link-1');
-      var l2 = document.getElementById('email-link-2');
-      if (l1) { l1.href = m; l1.textContent = e; }
-      if (l2) { l2.href = m; }
-    })();
-  </script><script>
+  <script>
     // POUR AJOUTER UNE PHOTO NATURE :
     // Les photos nature vont dans le dossier photos/ sur GitHub
     // exemple : { src: "photos/nom-photo.avif", label: "Mon titre" }
@@ -751,4 +746,23 @@
       lbWrapEl.style.opacity = '';
 
       if (Math.abs(dy) > Math.abs(dx) && dy > 80) {
-        // Swipe bas 
+        // Swipe bas
+        // Swipe bas → fermer
+        lbWrapEl.classList.add('swipe-down');
+        setTimeout(() => {
+          closeLightbox();
+          lbWrapEl.classList.remove('swipe-down');
+          lbWrapEl.style.transform = '';
+          lbWrapEl.style.opacity = '';
+        }, 300);
+      }
+    });
+
+    // Email icon link
+    (function() {
+      var l2 = document.getElementById('email-link-2');
+      if (l2) { l2.href = 'mailto:' + 'jeremjour.drone' + '@' + 'gmail.com'; }
+    })();
+  </script>
+</body>
+</html>
