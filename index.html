@@ -608,26 +608,15 @@
     function lightboxNav(dir) {
       const lbImg  = document.getElementById('lightbox-img');
       const lbWrap = lbImg.parentElement;
-      lbWrap.classList.add(dir > 0 ? 'slide-out-left' : 'slide-out-right');
-      setTimeout(() => {
-        lightboxIndex = (lightboxIndex + dir + activeGallery.length) % activeGallery.length;
-        const cp = activeGallery[lightboxIndex];
-        
-        lbImg.src = cp.src;
-        
-        document.getElementById('lightbox-caption').textContent = labelFromSrc2(cp.src, cp.label);
-        updateCounter();
-        preload(lightboxIndex);
-        lbWrap.style.transition = 'none';
-        lbWrap.style.transform = dir > 0 ? 'translateX(80px)' : 'translateX(-80px)';
-        lbWrap.style.opacity = '0';
-        lbWrap.classList.remove('slide-out-left', 'slide-out-right');
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          lbWrap.style.transition = '';
-          lbWrap.style.transform = '';
-          lbWrap.style.opacity = '';
-        }));
-      }, 50);
+      lightboxIndex = (lightboxIndex + dir + activeGallery.length) % activeGallery.length;
+      const cp = activeGallery[lightboxIndex];
+      lbImg.src = cp.src;
+      document.getElementById('lightbox-caption').textContent = labelFromSrc2(cp.src, cp.label);
+      updateCounter();
+      preload(lightboxIndex);
+      lbWrap.style.transition = 'none';
+      lbWrap.style.transform = '';
+      lbWrap.style.opacity = '';
     }
 
     function lightboxClickNav(e) {
