@@ -717,7 +717,7 @@
       } else if (swipeAxis === 'x' && Math.abs(dx) > threshold) {
         // Seuil atteint → sortie rapide puis changement
         const dir = dx < 0 ? 1 : -1;
-        lbWrapEl.style.transition = 'transform 0.06s ease, opacity 0.06s ease';
+        lbWrapEl.style.transition = 'transform 0.18s ease, opacity 0.18s ease';
         lbWrapEl.style.transform = `translateX(${dx < 0 ? '-110%' : '110%'})`;
         lbWrapEl.style.opacity = '0';
         setTimeout(() => {
@@ -725,7 +725,7 @@
           lbWrapEl.style.transform = '';
           lbWrapEl.style.opacity = '';
           lightboxNav(dir);
-        }, 60);
+        }, 180);
       } else {
         // Trop court → retour élastique
         lbWrapEl.style.transition = 'transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.2s ease';
