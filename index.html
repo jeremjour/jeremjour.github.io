@@ -777,9 +777,3 @@
 
   // ── Protection photos ──────────────────────────────────────────
   document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('contextmenu', e => e.preventDefault());
-    img.addEventListener('dragstart', e => e.preventDefault());
-  });
-  document.querySelector('.gallery-grid')?.addEventListener('contextmenu', e => e.preventDefault());
-  // Protection dans le lightbox
-  const lbImg = document.getElem
