@@ -8,12 +8,12 @@
   <meta name="author" content="Jérém — @jeremjour">
   <meta property="og:title" content="Jérém — Photographie & Nature">
   <meta property="og:description" content="Portfolio photo et vidéo — Drone, nature et paysages. Sud-Ouest, France.">
-  <meta property="og:image" content="photos/espiaube_paysage.jpg">
+  <meta property="og:image" content="espiaube-paysage.avif">
   <meta property="og:url" content="https://jeremjour.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jérém — Drone & Nature">
-  <meta name="twitter:image" content="photos/espiaube_paysage.jpg">
+  <meta name="twitter:image" content="espiaube-paysage.avif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <style>
@@ -65,10 +65,10 @@
     .section-num { font-family: 'Lora', serif; font-style: italic; font-size: 0.75rem; color: var(--muted); }
 
     /* GALERIE PHOTOS */
-    .gallery-grid { columns: 3; column-gap: 5px; }
-    .gallery-item { break-inside: avoid; margin-bottom: 5px; overflow: hidden; position: relative; cursor: pointer; }
-    .gallery-item img { width: 100%; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
-    .gallery-item:hover img { transform: scale(1.03); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+    .gallery-item { position: relative; cursor: pointer; overflow: hidden; aspect-ratio: 4/3; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-item img { -webkit-user-drag: none; user-drag: none; }
     .gallery-item-overlay {
       position: absolute; inset: 0; z-index: 2;
@@ -79,15 +79,7 @@
     .gallery-item:hover .gallery-item-overlay {
       background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0) 100%);
     }
-    /* Watermark */
-    .gallery-item::after {
-      content: '© jeremjour';
-      position: absolute; bottom: 10px; right: 10px; z-index: 3;
-      font-family: 'Montserrat', sans-serif; font-size: 0.5rem;
-      font-weight: 400; letter-spacing: 0.15em; text-transform: lowercase;
-      color: rgba(255,255,255,0.45); pointer-events: none;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
+
     .gallery-label {
       font-family: 'Oswald', sans-serif; font-weight: 400;
       font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
@@ -270,6 +262,7 @@
       transition: filter 0.4s ease;
     }
     .lightbox-img-wrap img.loading { filter: blur(8px); }
+
     .lightbox-caption {
       position: absolute;
       bottom: 12px;
@@ -341,7 +334,7 @@
     @media (max-width: 900px) {
       nav { padding: 0 1.5rem; }
       section { padding: 0.8rem 1.5rem 2.5rem; }
-      .gallery-grid { columns: 2; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; }
       footer { padding: 1.5rem; }
     }
     @media (max-width: 600px) {
@@ -349,9 +342,8 @@
       .nav-logo { font-size: 1.1rem; }
       .nav-links { gap: 1.2rem; }
       section { padding: 0.5rem 1rem 2rem; margin-top: 56px; }
-      .gallery-grid { columns: 2; column-gap: 4px; }
-      .gallery-item { margin-bottom: 4px; }
-      .gallery-label { font-size: 0.42rem; letter-spacing: 0.15em; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 3px; }
+      .gallery-label { font-size: 0.38rem; letter-spacing: 0.12em; }
       .video-grid { columns: 1; }
       footer { padding: 1.2rem 1rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
@@ -377,6 +369,7 @@
     <ul class="nav-links">
       <li><a href="#" onclick="showSection('photos');return false;" id="tab-photos">Photos</a></li>
       <li><a href="#" onclick="showSection('videos');return false;" id="tab-videos">Vidéos</a></li>
+      <li><a href="#" onclick="showSection('evenements');return false;" id="tab-evenements">Événements</a></li>
       <li><a href="#" onclick="showSection('contact');return false;" id="tab-contact">Contact</a></li>
     </ul>
   </nav>
@@ -393,6 +386,12 @@
     </div>
   </section>
 
+  <!-- ÉVÉNEMENTS -->
+  <section id="evenements" class="hidden">
+    <div class="gallery-grid reveal" id="evenements-grid">
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="hidden">
     <div class="contact-inner reveal">
@@ -406,12 +405,12 @@
 
       <!-- Adresse mail -->
       <div class="contact-row">
-        <span class="c-label">Contact —</span> <span class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a202f382f2720253f38642e3825242f0a2d272b232664292527">[email&#160;protected]</a></span>
+        <span class="c-label">Contact —</span> <span class="c-val"><a href="/cdn-cgi/l/email-protection#660c0314030b0c09131448021409080326010b070f0a4805090b"><span class="__cf_email__" data-cfemail="d6bcb3a4b3bbbcb9a3a4f8b2a4b9b8b396b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></a></span>
       </div>
 
       <!-- Icônes -->
       <div class="contact-icons">
-        <a class="contact-icon" href="/cdn-cgi/l/email-protection#a5cfc0d7c0c8cfcad0d78bc1d7cacbc0e5c2c8c4ccc98bc6cac8" title="Email">
+        <a class="contact-icon" href="/cdn-cgi/l/email-protection#fb919e899e9691948e89d59f8994959ebb9c969a9297d5989496" title="Email">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M2 7l10 7 10-7"/>
@@ -459,20 +458,24 @@
     // ════════════════════════════════════════
     // POUR AJOUTER UNE PHOTO :
     // Ajoutez une ligne dans le tableau photos[] ci-dessous
-    // exemple : { src: "photos/ma-photo.jpg", label: "Mon titre" }
+    // ════════════════════════════════════════
+    // POUR AJOUTER UNE PHOTO NATURE :
+    // Les photos nature vont dans le dossier photos/ sur GitHub
+    // exemple : { src: "photos/nom-photo.avif", label: "Mon titre" }
+    // ════════════════════════════════════════
     // ════════════════════════════════════════
     const photos = [
-  { src: "ruelle-de-perast.jpg", label: "Ruelle De Perast" },
-  { src: "perast.jpg", label: "Perast" },
-  { src: "vue-sur-perast.jpg", label: "Vue Sur Perast" },
-  { src: "île-de-Saint-Georges.jpg", label: "îLe De Saint Georges" },
-  { src: "notre-dame-du rocher-kotor.jpg", label: "Notre Dame Du Rocher Kotor" },
-  { src: "clocher-de-Perast.jpg", label: "Clocher De Perast" },
-  { src: "vue-sur-l'île-de-saint-georges.jpg", label: "Vue Sur L'îLe De Saint Georges" },
-  { src: "port-de-kotor.jpg", label: "Port De Kotor" },
-  { src: "chapelle-à-Kotor.jpg", label: "Chapelle à Kotor" },
-  { src: "lac-noir.jpg", label: "Lac Noir" },
-  { src: "vieille-ville-de-kotor-monténégro.jpg", label: "Vieille Ville De Kotor MontéNéGro" }
+  { src: "photos/chapelle-a-kotor.avif", label: "Chapelle à Kotor" },
+  { src: "photos/clocher-de-perast.avif", label: "Clocher De Perast" },
+  { src: "photos/ile-de-saint-georges.avif", label: "îLe De Saint Georges" },
+  { src: "photos/lac-noir.avif", label: "Lac Noir" },
+  { src: "photos/notre-dame-du-rocher-kotor.avif", label: "Notre Dame Du Rocher Kotor" },
+  { src: "photos/perast.avif", label: "Perast" },
+  { src: "photos/port-de-kotor.avif", label: "Port De Kotor" },
+  { src: "photos/ruelle-de-perast.avif", label: "Ruelle De Perast" },
+  { src: "photos/vieille-ville-de-kotor-montenegro.avif", label: "Vieille Ville De Kotor MontéNéGro" },
+  { src: "photos/vue-sur-l-ile-de-saint-georges.avif", label: "Vue Sur L'îLe De Saint Georges" },
+  { src: "photos/vue-sur-perast.avif", label: "Vue Sur Perast" }
 ];
 
     // ════════════════════════════════════════
@@ -482,6 +485,16 @@
     // exemple : { id: "dQw4w9WgXcQ", format: "portrait", label: "Mon titre" }
     // ════════════════════════════════════════
     const videos = [
+
+    ];
+
+    // ════════════════════════════════════════
+    // POUR AJOUTER UNE PHOTO D'ÉVÉNEMENT :
+    // Les photos événements vont dans le dossier evenements/ sur GitHub
+    // Le chemin commence toujours par "evenements/"
+    // exemple : { src: "evenements/concert-nom.avif", label: "Nom Concert" }
+    // ════════════════════════════════════════
+    const evenements = [
 
     ];
 
@@ -518,10 +531,29 @@
       ).join('');
     }
 
+    // ─── Rendu galerie événements ───
+    function renderEvenements() {
+      const grid = document.getElementById('evenements-grid');
+      if (evenements.length === 0) {
+        grid.innerHTML = `<div style="grid-column:1/-1;padding:4rem 0;text-align:center;">
+          <span style="font-family:'Oswald',sans-serif;font-weight:300;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--border);">Photos à venir</span>
+        </div>`;
+        return;
+      }
+      grid.innerHTML = evenements.map((p, i) => {
+        const label = labelFromSrc(p.src, p.label);
+        return `<div class="gallery-item" onclick="openLightbox(${i}, 'evenements')">
+          <img src="${p.src}" alt="${label}" loading="lazy">
+          <div class="gallery-item-overlay"><span class="gallery-label">${label}</span></div>
+        </div>`;
+      }).join('');
+    }
+
     renderPhotos();
     renderVideos();
+    renderEvenements();
 
-    const sections = ['photos','videos','contact'];
+    const sections = ['photos','videos','evenements','contact'];
 
     function showSection(id) {
       sections.forEach(s => {
@@ -549,6 +581,7 @@
 
     let lightboxItems = [];
     let lightboxIndex = 0;
+    let activeGallery = photos; // tracks which array is open in lightbox
 
     function labelFromSrc2(src, fallback) {
       if (fallback) return fallback;
@@ -558,18 +591,19 @@
 
     function updateCounter() {
       document.getElementById('lightbox-counter').textContent =
-        (lightboxIndex + 1) + ' / ' + photos.length;
+        (lightboxIndex + 1) + ' / ' + activeGallery.length;
     }
 
     function preload(index) {
-      const prev = (index - 1 + photos.length) % photos.length;
-      const next = (index + 1) % photos.length;
-      [prev, next].forEach(i => { const img = new Image(); img.src = photos[i].src; });
+      const prev = (index - 1 + activeGallery.length) % activeGallery.length;
+      const next = (index + 1) % activeGallery.length;
+      [prev, next].forEach(i => { const img = new Image(); img.src = activeGallery[i].src; });
     }
 
-    function openLightbox(index) {
+    function openLightbox(index, type) {
+      activeGallery = (type === 'evenements') ? evenements : photos;
       lightboxIndex = index;
-      const p = photos[index];
+      const p = activeGallery[index];
       const lbImg = document.getElementById('lightbox-img');
       lbImg.classList.add('loading');
       lbImg.src = p.src;
@@ -586,8 +620,8 @@
       const lbWrap = lbImg.parentElement;
       lbWrap.classList.add(dir > 0 ? 'slide-out-left' : 'slide-out-right');
       setTimeout(() => {
-        lightboxIndex = (lightboxIndex + dir + photos.length) % photos.length;
-        const cp = photos[lightboxIndex];
+        lightboxIndex = (lightboxIndex + dir + activeGallery.length) % activeGallery.length;
+        const cp = activeGallery[lightboxIndex];
         lbImg.classList.add('loading');
         lbImg.src = cp.src;
         lbImg.onload = () => lbImg.classList.remove('loading');
@@ -745,7 +779,5 @@
     img.addEventListener('dragstart', e => e.preventDefault());
   });
   document.querySelector('.gallery-grid')?.addEventListener('contextmenu', e => e.preventDefault());
-
-  </script>
-</body>
-</html>
+  // Protection dans le lightbox
+  const lbImg = document.getElem
