@@ -66,8 +66,8 @@
 
     /* GALERIE PHOTOS */
     .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
-    .gallery-item { position: relative; cursor: pointer; overflow: hidden; aspect-ratio: 4/3; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .gallery-item { position: relative; cursor: pointer; overflow: hidden; }
+    .gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
     .gallery-item:hover img { transform: scale(1.05); }
     .gallery-item img { -webkit-user-drag: none; user-drag: none; }
     .gallery-item-overlay {
@@ -463,9 +463,9 @@
     const photos = [
   { src: "photos/ruelle-dans-perast.avif", label: "Ruelle Dans Perast" },
   { src: "photos/notre-dame-du-rocher.avif", label: "Notre Dame Du Rocher" },
-  { src: "photos/ile-saint-george.avif", label: "Ile Saint George" },
+  { src: "photos/ile-saint-george-montenegro.avif", label: "Ile Saint George Montenegro" },
   { src: "photos/ile-saint-georges-kotor.avif", label: "Ile Saint Georges Kotor" },
-  { src: "photos/lac-noir-durmitor.avif", label: "Lac Noir Durmitor" },
+  { src: "photos/lac-noir-parc-durmitor.avif", label: "Lac Noir Parc Durmitor" },
   { src: "photos/barque-du-lac-noir.avif", label: "Barque Du Lac Noir" },
   { src: "photos/chapelle.avif", label: "Chapelle" },
   { src: "photos/port-de-kotor.avif", label: "Port De Kotor" },
