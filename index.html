@@ -130,32 +130,6 @@
     /* CONTACT */
     .contact-inner { max-width: 100%; }
     .contact-hero {
-      position: relative;
-      width: 100%;
-      min-height: 380px;
-      margin-bottom: 3rem;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 3rem;
-      background: var(--bg2);
-    }
-    .contact-hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('contact-bg.jpg');
-      background-size: cover; background-position: top;
-      transition: transform 0.8s ease;
-    }
-    .contact-hero:hover .contact-hero-bg { transform: scale(1.02); }
-    .contact-hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
-    }
-    .contact-hero-text {
-      position: relative; z-index: 2;
-    }
-    @media (max-width: 600px) { .contact-hero { min-height: 260px; padding: 2rem; } }
-    .contact-hero {
       position: relative; width: 100%; min-height: 360px;
       margin-bottom: 0; overflow: hidden;
       display: flex; align-items: flex-end; padding: 2.5rem;
@@ -217,7 +191,7 @@
       font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.85rem; color: var(--text);
     }
     .contact-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-    .contact-icons { display: flex; gap: 1.8rem; margin-top: 1.2rem; }
+    .contact-icons { display: flex; gap: 1.8rem; margin-top: 1.2rem; justify-content: center; }
     .contact-icon { color: var(--muted); transition: color 0.3s, transform 0.3s; display: flex; }
     .contact-icon:hover { color: var(--text); transform: translateY(-2px); }
 
@@ -347,7 +321,6 @@
       .video-grid { columns: 1; }
       footer { padding: 1.2rem 1rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
-
     /* HAMBURGER */
     .nav-hamburger {
       display: none; flex-direction: column; justify-content: center;
@@ -378,9 +351,7 @@
     }
     .nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
     .nav-mobile-menu a.active { color: var(--text); }
-    @media (max-width: 600px) {
-      .nav-hamburger { display: flex; }
-    }
+    @media (max-width: 600px) { .nav-hamburger { display: flex; } }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WFVGB31J"></script>
@@ -568,9 +539,23 @@
     // ─── Rendu galerie vidéos ───
     function renderVideos() {
       const grid = document.getElementById('video-grid');
-      grid.innerHTML = `<div style="grid-column:1/-1;padding:4rem 0;text-align:center;">
+      if (videos.length === 0) {
+        grid.innerHTML = `<div style="grid-column:1/-1;padding:4rem 0;text-align:center;">
           <span style="font-family:'Oswald',sans-serif;font-weight:300;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--border);">Vidéo à venir</span>
         </div>`;
+        return;
+      }
+      grid.innerHTML = videos.map((v, i) => {
+        const isPortrait = v.format === 'portrait';
+        return `<div class="video-item ${isPortrait ? 'portrait' : 'landscape'}" onclick="openVideoLightbox('${v.id}', this)">
+          <div class="video-inner">
+            <div class="video-play">
+              <svg width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13"/></svg>
+            </div>
+            <span class="video-label">${v.label || ''}</span>
+          </div>
+        </div>`;
+      }).join('');
     }
 
     
