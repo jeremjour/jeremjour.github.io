@@ -365,10 +365,6 @@
 </head>
 <body>
 
-  <div class="setup-banner">
-    Remplacer les placeholders par tes photos · Ajouter les liens Reels · Supprimer cette bannière
-  </div>
-
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo" onclick="showSection('photos');return false;">Jerem</a>
@@ -431,7 +427,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Jérém</span>
+    <span>© 2026 Jérém</span>
     <span>Photographie & Vidéographie</span>
   </footer>
 
@@ -575,7 +571,8 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // init reveal on photos
+    // init — onglet Photos actif au chargement
+    document.getElementById('tab-photos').classList.add('active');
     document.querySelectorAll('#photos .reveal').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), 100 + i * 60);
     });
@@ -639,12 +636,6 @@
       document.getElementById('lightbox').classList.remove('active');
       document.body.style.overflow = '';
     }
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') lightboxNav(1);
-      if (e.key === 'ArrowLeft') lightboxNav(-1);
-    });
 
     function openVideoLightbox(youtubeId, item) {
       if (!youtubeId || youtubeId.startsWith('LIEN_')) return;
