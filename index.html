@@ -633,13 +633,17 @@
           if (mobTab) mobTab.classList.remove('active');
         }
       });
+      history.replaceState(null, '', '#' + id);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // init — onglet Photos actif au chargement
-    document.getElementById('tab-photos').classList.add('active');
-    document.getElementById('mob-tab-photos').classList.add('active');
-    document.querySelectorAll('#photos .reveal').forEach((el, i) => {
+    // init — lit le hash ou affiche Photos par défaut
+    const initSection = sections.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'photos';
+    document.getElementById('tab-' + initSection).classList.add('active');
+    document.getElementById('mob-tab-' + initSection).classList.add('active');
+    document.getElementById(initSection).classList.remove('hidden');
+    sections.filter(s => s !== initSection).forEach(s => document.getElementById(s).classList.add('hidden'));
+    document.querySelectorAll('#' + initSection + ' .reveal').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), 100 + i * 60);
     });
 
