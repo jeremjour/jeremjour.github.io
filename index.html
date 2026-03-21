@@ -749,6 +749,8 @@
       document.body.style.overflow = '';
     }
 
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { closeLightbox(); closeVideoLightbox(); }
       if (e.key === 'ArrowRight') lightboxNav(1);
