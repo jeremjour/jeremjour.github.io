@@ -14,6 +14,8 @@
   <meta property="og:title" content="Jerem — Photography &amp; Drone | jeremjour.com">
   <meta property="og:description" content="Shot of silence. Photographie et vidéo drone — Pyrénées, nature, paysages de France.">
   <meta property="og:image" content="https://jeremjour.com/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://jeremjour.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -65,7 +67,7 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -112,8 +114,6 @@
       font-family: 'Oswald', sans-serif; font-weight: 500;
       font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text);
     }
-    .section-num { font-family: 'Lora', serif; font-style: italic; font-size: 0.75rem; color: var(--muted); }
-
     /* GALERIE PHOTOS */
     .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
     .gallery-item { position: relative; cursor: pointer; overflow: hidden; }
@@ -137,16 +137,6 @@
       text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
     .gallery-item:hover .gallery-label { opacity: 1; transform: translateY(0); }
-
-    /* placeholder */
-    .ph {
-      width: 100%; background: var(--bg2); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .ph-text {
-      font-family: 'Oswald', sans-serif; font-weight: 300;
-      font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--border);
-    }
 
     /* VIDÉOS */
     #videos { background: var(--bg); }
@@ -411,11 +401,6 @@
     gtag('js', new Date());
     gtag('config', 'G-R3WFVGB31J');
   
-    // Email icon link
-    (function() {
-      var l2 = document.getElementById('email-link-2');
-      if (l2) { l2.href = 'mailto:' + 'jeremjour.drone' + '@' + 'gmail.com'; }
-    })();
   </script>
 </head>
 <body>
@@ -568,18 +553,18 @@
     // exemple : { src: "evenements/concert-nom.avif", label: "Nom Concert" }
     // ════════════════════════════════════════
     const evenements = [
-  { src: "evenements/IMG20251031234943 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251101001104 - Publication Instagram-3.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251101024027 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251101024139 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251102013843 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251031234917 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251031232305_01 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20251031231621 - Publication Instagram.avif", label: "SONORA OCTOBRE 25" },
-  { src: "evenements/IMG20250614025843-Avec accentuation-SR-Site Web AVIF 4x3-2.avif", label: "MADAME LOYAL X SONORA 25" },
-  { src: "evenements/IMG20250614034357-Avec accentuation-SR-Site Web AVIF 4x3-2.avif", label: "MADAME LOYAL X SONORA 25" },
-  { src: "evenements/IMG20250614034132-Avec accentuation-SR.avif", label: "MADAME LOYAL X SONORA 25" },
-  { src: "evenements/IMG20250614030049-Avec accentuation-SR.avif", label: "MADAME LOYAL X SONORA 25" }
+  { src: "evenements/sonora-25-01.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-02.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-03.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-04.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-05.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-06.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-07.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/sonora-25-08.avif", label: "SONORA OCTOBRE 25" },
+  { src: "evenements/madame-loyal-sonora-01.avif", label: "MADAME LOYAL X SONORA 25" },
+  { src: "evenements/madame-loyal-sonora-02.avif", label: "MADAME LOYAL X SONORA 25" },
+  { src: "evenements/madame-loyal-sonora-03.avif", label: "MADAME LOYAL X SONORA 25" },
+  { src: "evenements/madame-loyal-sonora-04.avif", label: "MADAME LOYAL X SONORA 25" }
 ];
 
     // ─── Génère label depuis nom de fichier si absent ───
@@ -695,12 +680,6 @@
     let lightboxIndex = 0;
     let activeGallery = photos; // tracks which array is open in lightbox
 
-    function labelFromSrc2(src, fallback) {
-      if (fallback) return fallback;
-      const name = src.split('/').pop().replace(/\.[^.]+$/, '');
-      return name.replace(/[-_]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    }
-
     function updateCounter() {
       document.getElementById('lightbox-counter').textContent =
         (lightboxIndex + 1) + ' / ' + activeGallery.length;
@@ -720,7 +699,7 @@
       
       lbImg.src = p.src;
       
-      document.getElementById('lightbox-caption').textContent = labelFromSrc2(p.src, p.label);
+      document.getElementById('lightbox-caption').textContent = labelFromSrc(p.src, p.label);
       updateCounter();
       preload(index);
       document.getElementById('lightbox').classList.add('active');
@@ -733,7 +712,7 @@
       lightboxIndex = (lightboxIndex + dir + activeGallery.length) % activeGallery.length;
       const cp = activeGallery[lightboxIndex];
       lbImg.src = cp.src;
-      document.getElementById('lightbox-caption').textContent = labelFromSrc2(cp.src, cp.label);
+      document.getElementById('lightbox-caption').textContent = labelFromSrc(cp.src, cp.label);
       updateCounter();
       preload(lightboxIndex);
       lbWrap.style.transition = 'none';
