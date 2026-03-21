@@ -396,9 +396,9 @@
     .ig-tab { display: none; }
     @media (max-width: 600px) {
       .ig-tab {
-        position: fixed; right: -36px; top: 75%; transform: translateY(-50%);
+        position: fixed; right: -46px; top: 75%; transform: translateY(-50%);
         z-index: 300;
-        width: 48px; height: 48px; border-radius: 10px;
+        width: 62px; height: 62px; border-radius: 12px;
         background: #fff; border: 1px solid var(--border);
         display: flex; align-items: center; justify-content: center;
         cursor: pointer; -webkit-tap-highlight-color: transparent;
@@ -799,6 +799,14 @@
     }
 
     document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Ferme le volet Instagram au tap en dehors
+    document.addEventListener('click', e => {
+      const tab = document.getElementById('ig-tab');
+      if (tab && tab.classList.contains('open') && !tab.contains(e.target)) {
+        tab.classList.remove('open');
+      }
+    });
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { closeLightbox(); closeVideoLightbox(); }
