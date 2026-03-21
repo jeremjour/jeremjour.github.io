@@ -101,7 +101,7 @@
     .nav-links a.active { color: var(--text); border-bottom-color: var(--text); }
 
     /* SECTIONS */
-    section { padding: 1rem 3rem 3rem; margin-top: 64px; }
+    section { padding: 1rem 3rem 3rem; margin-top: 64px; transition: opacity 0.3s ease; }
     section.hidden { display: none; }
 
     /* SECTION HEADER */
@@ -644,26 +644,55 @@
       document.getElementById('nav-mobile-menu').classList.remove('open');
     }
 
+    let transitioning = false;
+
     function showSection(id) {
+      if (transitioning) return;
+      const currentId = sections.find(s => !document.getElementById(s).classList.contains('hidden'));
+      if (currentId === id) return;
+
+      // Nav update immédiat
       sections.forEach(s => {
-        const sec = document.getElementById(s);
         const tab = document.getElementById('tab-' + s);
         const mobTab = document.getElementById('mob-tab-' + s);
-        if (s === id) {
-          sec.classList.remove('hidden');
-          tab.classList.add('active');
-          if (mobTab) mobTab.classList.add('active');
-          sec.querySelectorAll('.reveal').forEach((el, i) => {
-            setTimeout(() => el.classList.add('visible'), i * 60);
-          });
-        } else {
-          sec.classList.add('hidden');
-          tab.classList.remove('active');
-          if (mobTab) mobTab.classList.remove('active');
-        }
+        if (s === id) { tab.classList.add('active'); if (mobTab) mobTab.classList.add('active'); }
+        else { tab.classList.remove('active'); if (mobTab) mobTab.classList.remove('active'); }
       });
       history.replaceState(null, '', '#' + id);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (!currentId) {
+        const next = document.getElementById(id);
+        next.classList.remove('hidden');
+        next.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 60));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      transitioning = true;
+      const currentEl = document.getElementById(currentId);
+      const nextEl = document.getElementById(id);
+
+      // Fade out
+      currentEl.style.opacity = '0';
+
+      setTimeout(() => {
+        currentEl.classList.add('hidden');
+        currentEl.style.opacity = '';
+
+        // Prépare la nouvelle section invisible
+        nextEl.style.opacity = '0';
+        nextEl.classList.remove('hidden');
+        nextEl.offsetHeight; // force reflow
+        nextEl.style.opacity = '1';
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+          nextEl.style.opacity = '';
+          nextEl.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 60));
+          transitioning = false;
+        }, 300);
+      }, 300);
     }
 
     // init — lit le hash ou affiche Photos par défaut
