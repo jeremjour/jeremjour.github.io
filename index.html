@@ -392,18 +392,39 @@
     .nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
     .nav-mobile-menu a.active { color: var(--text); }
     @media (max-width: 600px) { .nav-hamburger { display: flex; } }
-    /* ICÔNE INSTAGRAM FLOTTANTE — mobile uniquement */
-    .fab-instagram { display: none; }
+    /* VOLET INSTAGRAM — mobile uniquement */
+    .ig-drawer { display: none; }
     @media (max-width: 600px) {
-      .fab-instagram {
-        display: flex;
-        position: fixed; bottom: 2.5rem; right: 1.4rem; z-index: 300;
-        color: var(--text);
-        background: #ffffff;
-        padding: 8px;
-        transition: opacity 0.2s;
+      .ig-drawer {
+        position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+        z-index: 300; display: flex; flex-direction: row; align-items: center;
       }
-      .fab-instagram:active { opacity: 0.6; }
+      .ig-drawer-panel {
+        display: flex; align-items: center; justify-content: center;
+        background: #fff;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        border-left: 1px solid var(--border);
+        max-width: 0; overflow: hidden; padding: 0.9rem 0;
+        transition: max-width 0.3s ease, padding 0.3s ease;
+        color: var(--text); text-decoration: none;
+      }
+      .ig-drawer-panel svg { flex-shrink: 0; }
+      .ig-drawer.open .ig-drawer-panel {
+        max-width: 70px; padding: 0.9rem 1.1rem;
+      }
+      .ig-drawer-tab {
+        background: #fff;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        border-left: 1px solid var(--border);
+        padding: 0.9rem 0.45rem;
+        cursor: pointer; display: flex; align-items: center; justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        color: var(--muted); transition: color 0.2s;
+      }
+      .ig-drawer-tab:active { color: var(--text); }
+      .ig-drawer.open .ig-drawer-tab svg { transform: scaleX(-1); }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -870,12 +891,20 @@
     })();
   </script>
   <!-- Bouton Instagram flottant — mobile uniquement -->
-  <a class="fab-instagram" href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="Instagram @jeremjour">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      <circle cx="12" cy="12" r="4"/>
-      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
-    </svg>
-  </a>
+  <!-- Volet Instagram — mobile uniquement -->
+  <div class="ig-drawer" id="ig-drawer">
+    <a class="ig-drawer-panel" href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="@jeremjour sur Instagram">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+    <button class="ig-drawer-tab" onclick="document.getElementById('ig-drawer').classList.toggle('open')" aria-label="Instagram">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <polyline id="ig-chevron" points="7,2 3,5 7,8"/>
+      </svg>
+    </button>
+  </div>
 </body>
 </html>
