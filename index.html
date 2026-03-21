@@ -396,7 +396,7 @@
     .ig-drawer { display: none; }
     @media (max-width: 600px) {
       .ig-drawer {
-        position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+        position: fixed; right: 0; top: 75%; transform: translateY(-50%);
         z-index: 300; display: flex; flex-direction: row; align-items: center;
       }
       .ig-drawer-panel {
@@ -418,13 +418,15 @@
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
         border-left: 1px solid var(--border);
-        padding: 0.9rem 0.45rem;
+        padding: 0.9rem 0.35rem;
         cursor: pointer; display: flex; align-items: center; justify-content: center;
         -webkit-tap-highlight-color: transparent;
         color: var(--muted); transition: color 0.2s;
+        font-family: 'Oswald', sans-serif; font-weight: 300;
+        font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase;
+        writing-mode: vertical-rl; text-orientation: mixed;
       }
       .ig-drawer-tab:active { color: var(--text); }
-      .ig-drawer.open .ig-drawer-tab svg { transform: scaleX(-1); }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -901,9 +903,7 @@
       </svg>
     </a>
     <button class="ig-drawer-tab" onclick="document.getElementById('ig-drawer').classList.toggle('open')" aria-label="Instagram">
-      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <polyline id="ig-chevron" points="7,2 3,5 7,8"/>
-      </svg>
+      IG
     </button>
   </div>
 </body>
