@@ -396,21 +396,18 @@
     .ig-tab { display: none; }
     @media (max-width: 600px) {
       .ig-tab {
-        position: fixed; right: -46px; top: 75%; transform: translateY(-50%);
+        position: fixed; right: -20px; top: 75%; transform: translateY(-50%);
         z-index: 300;
         width: 62px; height: 62px; border-radius: 12px;
         background: #fff; border: 1px solid var(--border);
         display: flex; align-items: center; justify-content: center;
-        cursor: pointer; -webkit-tap-highlight-color: transparent;
-        transition: right 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
         box-shadow: -3px 2px 12px rgba(0,0,0,0.15);
+        -webkit-tap-highlight-color: transparent;
       }
-      .ig-tab.open { right: 10px; }
       .ig-tab a {
         display: flex; align-items: center; justify-content: center;
-        color: var(--text); pointer-events: none;
+        color: var(--text); width: 100%; height: 100%;
       }
-      .ig-tab.open a { pointer-events: auto; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -800,13 +797,6 @@
 
     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // Ferme le volet Instagram au tap en dehors
-    document.addEventListener('click', e => {
-      const tab = document.getElementById('ig-tab');
-      if (tab && tab.classList.contains('open') && !tab.contains(e.target)) {
-        tab.classList.remove('open');
-      }
-    });
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { closeLightbox(); closeVideoLightbox(); }
@@ -886,8 +876,8 @@
   </script>
   <!-- Bouton Instagram flottant — mobile uniquement -->
   <!-- Volet Instagram — mobile uniquement -->
-  <div class="ig-tab" id="ig-tab" onclick="document.getElementById('ig-tab').classList.toggle('open')">
-    <a href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="@jeremjour" onclick="event.stopPropagation()">
+  <div class="ig-tab">
+    <a href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="@jeremjour sur Instagram">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
         <circle cx="12" cy="12" r="4"/>
