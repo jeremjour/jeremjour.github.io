@@ -393,40 +393,24 @@
     .nav-mobile-menu a.active { color: var(--text); }
     @media (max-width: 600px) { .nav-hamburger { display: flex; } }
     /* VOLET INSTAGRAM — mobile uniquement */
-    .ig-drawer { display: none; }
+    .ig-tab { display: none; }
     @media (max-width: 600px) {
-      .ig-drawer {
-        position: fixed; right: 0; top: 75%; transform: translateY(-50%);
-        z-index: 300; display: flex; flex-direction: row; align-items: center;
-      }
-      .ig-drawer-panel {
+      .ig-tab {
+        position: fixed; right: -36px; top: 75%; transform: translateY(-50%);
+        z-index: 300;
+        width: 48px; height: 48px; border-radius: 10px;
+        background: #fff; border: 1px solid var(--border);
         display: flex; align-items: center; justify-content: center;
-        background: #fff;
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-        border-left: 1px solid var(--border);
-        max-width: 0; overflow: hidden; padding: 0.9rem 0;
-        transition: max-width 0.3s ease, padding 0.3s ease;
-        color: var(--text); text-decoration: none;
+        cursor: pointer; -webkit-tap-highlight-color: transparent;
+        transition: right 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+        box-shadow: -2px 0 8px rgba(0,0,0,0.06);
       }
-      .ig-drawer-panel svg { flex-shrink: 0; }
-      .ig-drawer.open .ig-drawer-panel {
-        max-width: 70px; padding: 0.9rem 1.1rem;
+      .ig-tab.open { right: 10px; }
+      .ig-tab a {
+        display: flex; align-items: center; justify-content: center;
+        color: var(--text); pointer-events: none;
       }
-      .ig-drawer-tab {
-        background: #fff;
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-        border-left: 1px solid var(--border);
-        padding: 0.9rem 0.35rem;
-        cursor: pointer; display: flex; align-items: center; justify-content: center;
-        -webkit-tap-highlight-color: transparent;
-        color: var(--muted); transition: color 0.2s;
-        font-family: 'Oswald', sans-serif; font-weight: 300;
-        font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase;
-        writing-mode: vertical-rl; text-orientation: mixed;
-      }
-      .ig-drawer-tab:active { color: var(--text); }
+      .ig-tab.open a { pointer-events: auto; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -894,17 +878,14 @@
   </script>
   <!-- Bouton Instagram flottant — mobile uniquement -->
   <!-- Volet Instagram — mobile uniquement -->
-  <div class="ig-drawer" id="ig-drawer">
-    <a class="ig-drawer-panel" href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="@jeremjour sur Instagram">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <div class="ig-tab" id="ig-tab" onclick="document.getElementById('ig-tab').classList.toggle('open')">
+    <a href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="@jeremjour" onclick="event.stopPropagation()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
         <circle cx="12" cy="12" r="4"/>
         <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
       </svg>
     </a>
-    <button class="ig-drawer-tab" onclick="document.getElementById('ig-drawer').classList.toggle('open')" aria-label="Instagram">
-      IG
-    </button>
   </div>
 </body>
 </html>
