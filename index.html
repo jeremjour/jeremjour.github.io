@@ -392,6 +392,25 @@
     .nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
     .nav-mobile-menu a.active { color: var(--text); }
     @media (max-width: 600px) { .nav-hamburger { display: flex; } }
+    /* BOUTON INSTAGRAM FLOTTANT — mobile uniquement */
+    .fab-instagram {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .fab-instagram {
+        display: flex; align-items: center; gap: 0.5rem;
+        position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 300;
+        background: var(--text); color: #fff;
+        padding: 0.65rem 1.1rem;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif; font-weight: 300;
+        font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+        transition: background 0.25s, transform 0.25s;
+      }
+      .fab-instagram:active { background: #333; transform: scale(0.96); }
+      .fab-instagram svg { flex-shrink: 0; }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WFVGB31J"></script>
@@ -856,5 +875,14 @@
       if (l2) { l2.href = 'mailto:' + 'jeremjour.drone' + '@' + 'gmail.com'; }
     })();
   </script>
+  <!-- Bouton Instagram flottant — mobile uniquement -->
+  <a class="fab-instagram" href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="Instagram @jeremjour">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.8" fill="#fff" stroke="none"/>
+    </svg>
+    @jeremjour
+  </a>
 </body>
 </html>
