@@ -392,21 +392,16 @@
     .nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
     .nav-mobile-menu a.active { color: var(--text); }
     @media (max-width: 600px) { .nav-hamburger { display: flex; } }
-    /* BOUTON INSTAGRAM FLOTTANT — mobile uniquement */
+    /* ICÔNE INSTAGRAM FLOTTANTE — mobile uniquement */
     .fab-instagram { display: none; }
     @media (max-width: 600px) {
       .fab-instagram {
-        display: flex; align-items: center; gap: 0.55rem;
-        position: fixed; bottom: 2.8rem; left: 50%; transform: translateX(-50%); z-index: 300;
-        background: var(--bg); border: 1px solid var(--border);
-        padding: 0.4rem 0.8rem;
-        text-decoration: none;
-        font-family: 'Oswald', sans-serif; font-weight: 300;
-        font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
-        white-space: nowrap;
-        transition: color 0.2s, border-color 0.2s;
+        display: flex;
+        position: fixed; bottom: 2.5rem; right: 1.4rem; z-index: 300;
+        color: var(--text); opacity: 0.55;
+        transition: opacity 0.2s;
       }
-      .fab-instagram:active { color: var(--text); border-color: var(--text); }
+      .fab-instagram:active { opacity: 1; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -874,12 +869,11 @@
   </script>
   <!-- Bouton Instagram flottant — mobile uniquement -->
   <a class="fab-instagram" href="https://instagram.com/jeremjour" target="_blank" rel="noopener" aria-label="Instagram @jeremjour">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
       <circle cx="12" cy="12" r="4"/>
       <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
     </svg>
-    @jeremjour
   </a>
 </body>
 </html>
