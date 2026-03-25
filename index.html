@@ -13,6 +13,8 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.ico">
+  <link rel="preload" as="image" href="photos/islande/islande-drone-01.avif" type="image/avif">
   <meta property="og:title" content="Jerem — Photography &amp; Drone | jeremjour.com">
   <meta property="og:description" content="Shot of silence. Photographie et vidéo drone — Pyrénées, nature, paysages de France.">
   <meta property="og:image" content="https://jeremjour.com/preview.jpg">
@@ -731,7 +733,7 @@
       const lbImg = document.getElementById('lightbox-img');
       
       lbImg.src = p.src;
-      
+      lbImg.alt = labelFromSrc(p.src, p.label);
       document.getElementById('lightbox-caption').textContent = labelFromSrc(p.src, p.label);
       updateCounter();
       preload(index);
