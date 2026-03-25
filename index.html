@@ -582,8 +582,9 @@
       const grid = document.getElementById('gallery-grid');
       grid.innerHTML = photos.map((p, i) => {
         const label = labelFromSrc(p.src, p.label);
+        const loading = i < 8 ? 'eager' : 'lazy';
         return `<div class="gallery-item" onclick="openLightbox(${i})">
-          <img src="${p.src}" alt="${label}" loading="lazy">
+          <img src="${p.src}" alt="${label}" loading="${loading}">
           <div class="gallery-item-overlay"><span class="gallery-label">${label}</span></div>
         </div>`;
       }).join('');
