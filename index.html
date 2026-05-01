@@ -399,6 +399,7 @@
     .nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
     .nav-mobile-menu a.active { color: var(--text); }
     @media (max-width: 600px) { .nav-hamburger { display: flex; } }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WFVGB31J"></script>
@@ -436,24 +437,28 @@
 
   <!-- PHOTOS -->
   <section id="photos">
+    <h1 class="sr-only">Jerem — Photographe &amp; Pilote Drone</h1>
     <div class="gallery-grid reveal" id="gallery-grid">
     </div>
   </section>
 
   <!-- VIDÉOS -->
   <section id="videos" class="hidden">
+    <h2 class="sr-only">Vidéos drone et nature</h2>
     <div class="gallery-grid reveal" id="video-grid">
     </div>
   </section>
 
   <!-- ÉVÉNEMENTS -->
   <section id="evenements" class="hidden">
+    <h2 class="sr-only">Photographie d'événements</h2>
     <div class="gallery-grid reveal" id="evenements-grid">
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="hidden">
+    <h2 class="sr-only">Contact &amp; Collaborations</h2>
     <div class="contact-inner reveal">
 
       <!-- Image de fond + titre -->
