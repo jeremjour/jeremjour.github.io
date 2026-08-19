@@ -1,0 +1,271 @@
+{
+  "_lisez_moi": "Seul fichier a modifier pour ajouter des photos ou un album. Relancer ensuite: python3 build.py",
+  "site": {
+    "url": "https://jeremjour.com",
+    "titre": "Jérém — Photographie & Nature | jeremjour.com",
+    "description": "Photographe et pilote de drone déclaré DGAC à Bordeaux. Paysages et nature du Sud-Ouest et des Pyrénées. Reportage événementiel.",
+    "analytics": "G-R3WFVGB31J"
+  },
+  "accueil": {
+    "_note": "Selection affichee sur la page d'accueil. Reference les photos par leur chemin. L'ordre ici est l'ordre affiche.",
+    "selection": [
+      "photos/islande/islande-drone-01.avif",
+      "photos/islande/islande-drone-02.avif",
+      "photos/islande/islande-drone-04.avif",
+      "photos/islande/islande-drone-05.avif",
+      "photos/islande/islande-drone-06.avif",
+      "photos/islande/islande-sol-01.avif",
+      "photos/islande/islande-sol-02.avif",
+      "photos/islande/islande-sol-03.avif",
+      "photos/saint-lary/saint-lary-01.avif",
+      "photos/saint-lary/saint-lary-02.avif",
+      "photos/saint-lary/saint-lary-03.avif",
+      "photos/saint-lary/saint-lary-04.avif",
+      "photos/saint-lary/saint-lary-05.avif",
+      "photos/saint-lary/saint-lary-06.avif",
+      "photos/montenegro/montenegro-01.avif",
+      "photos/ruelle-dans-perast.avif",
+      "photos/notre-dame-du-rocher.avif",
+      "photos/ile-saint-george.avif",
+      "photos/lac-noir-durmitor.avif",
+      "photos/chapelle.avif",
+      "photos/port-de-kotor.avif",
+      "photos/vieille-ville-kotor.avif",
+      "photos/ruelle-de-dubrovnik.avif",
+      "photos/eglise-saint-blaise-dubrovnik.avif",
+      "photos/dubrovnik-croatie.avif",
+      "photos/dubrovnik.avif"
+    ]
+  },
+  "albums": [
+    {
+      "slug": "islande",
+      "titre": "Islande",
+      "sous_titre": "Terres volcaniques et côtes de sable noir",
+      "description": "Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.",
+      "couverture": "photos/islande/islande-drone-05.avif",
+      "photos": [
+        {
+          "src": "photos/islande/islande-drone-01.avif",
+          "label": "Islande",
+          "alt": "Côte de sable noir et ressac vus du ciel, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-02.avif",
+          "label": "Islande",
+          "alt": "Champ de lave et fumerolles volcaniques, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-04.avif",
+          "label": "Islande",
+          "alt": "Rivière glaciaire en tresses vue au drone, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-05.avif",
+          "label": "Islande",
+          "alt": "Plage de sable noir et écume, vue aérienne, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-06.avif",
+          "label": "Islande",
+          "alt": "Toundra aux couleurs d'automne et relief volcanique, Islande"
+        },
+        {
+          "src": "photos/islande/islande-sol-01.avif",
+          "label": "Islande",
+          "alt": "Cascade de Goðafoss et brume, Islande"
+        },
+        {
+          "src": "photos/islande/islande-sol-02.avif",
+          "label": "Islande",
+          "alt": "Fjord islandais sous un ciel bas"
+        },
+        {
+          "src": "photos/islande/islande-sol-03.avif",
+          "label": "Islande",
+          "alt": "Panorama de montagnes islandaises depuis le sol"
+        }
+      ]
+    },
+    {
+      "slug": "saint-lary",
+      "titre": "Saint-Lary",
+      "sous_titre": "Hautes-Pyrénées",
+      "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photo et vidéo, au sol comme depuis le ciel.",
+      "couverture": "photos/saint-lary/saint-lary-01.avif",
+      "photos": [
+        {
+          "src": "photos/saint-lary/saint-lary-01.avif",
+          "label": "Saint-Lary",
+          "alt": "Sommets pyrénéens enneigés au-dessus de Saint-Lary"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-02.avif",
+          "label": "Saint-Lary",
+          "alt": "Vallée de Saint-Lary vue du ciel, Hautes-Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-03.avif",
+          "label": "Saint-Lary",
+          "alt": "Crêtes et reliefs pyrénéens, Saint-Lary"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-04.avif",
+          "label": "Saint-Lary",
+          "alt": "Versant de montagne au drone, Saint-Lary, Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-05.avif",
+          "label": "Saint-Lary",
+          "alt": "Paysage de haute montagne à Saint-Lary, Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-06.avif",
+          "label": "Saint-Lary",
+          "alt": "Panorama des Pyrénées depuis Saint-Lary"
+        }
+      ]
+    },
+    {
+      "slug": "montenegro",
+      "titre": "Monténégro",
+      "sous_titre": "Baie de Kotor et parc du Durmitor",
+      "description": "Baie de Kotor, Perast et parc national du Durmitor. Architecture, reliefs et lumières du Monténégro.",
+      "couverture": "photos/notre-dame-du-rocher.avif",
+      "photos": [
+        {
+          "src": "photos/montenegro/montenegro-01.avif",
+          "label": "Monténégro",
+          "alt": "Baie et montagnes du Monténégro"
+        },
+        {
+          "src": "photos/ruelle-dans-perast.avif",
+          "label": "Perast",
+          "alt": "Ruelle pavée de Perast au lever du soleil, baie de Kotor"
+        },
+        {
+          "src": "photos/notre-dame-du-rocher.avif",
+          "label": "Notre-Dame-du-Rocher",
+          "alt": "Église Notre-Dame-du-Rocher sur son îlot, baie de Kotor"
+        },
+        {
+          "src": "photos/ile-saint-george.avif",
+          "label": "Île Saint-Georges",
+          "alt": "Île Saint-Georges et son monastère bénédictin, Perast"
+        },
+        {
+          "src": "photos/lac-noir-durmitor.avif",
+          "label": "Lac Noir",
+          "alt": "Lac Noir et forêt de pins, parc national du Durmitor"
+        },
+        {
+          "src": "photos/chapelle.avif",
+          "label": "Chapelle",
+          "alt": "Chapelle isolée en pierre au-dessus de la baie, Monténégro"
+        },
+        {
+          "src": "photos/port-de-kotor.avif",
+          "label": "Port de Kotor",
+          "alt": "Port de Kotor et remparts vénitiens au crépuscule"
+        },
+        {
+          "src": "photos/vieille-ville-kotor.avif",
+          "label": "Vieille ville de Kotor",
+          "alt": "Toits de la vieille ville fortifiée de Kotor"
+        }
+      ]
+    },
+    {
+      "slug": "croatie",
+      "titre": "Croatie",
+      "sous_titre": "Dubrovnik",
+      "description": "Remparts, ruelles et toits de tuiles de Dubrovnik face à l'Adriatique.",
+      "couverture": "photos/dubrovnik.avif",
+      "photos": [
+        {
+          "src": "photos/ruelle-de-dubrovnik.avif",
+          "label": "Ruelle de Dubrovnik",
+          "alt": "Ruelle en escalier de la vieille ville de Dubrovnik, Croatie"
+        },
+        {
+          "src": "photos/eglise-saint-blaise-dubrovnik.avif",
+          "label": "Église Saint-Blaise",
+          "alt": "Église Saint-Blaise de style baroque, Dubrovnik, Croatie"
+        },
+        {
+          "src": "photos/dubrovnik-croatie.avif",
+          "label": "Dubrovnik",
+          "alt": "Remparts et toits de tuiles de Dubrovnik face à l'Adriatique"
+        },
+        {
+          "src": "photos/dubrovnik.avif",
+          "label": "Dubrovnik vu du ciel",
+          "alt": "Vue aérienne de la vieille ville de Dubrovnik et de la mer Adriatique"
+        }
+      ]
+    }
+  ],
+  "evenements": [
+    {
+      "src": "evenements/sonora-25-01.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (1/8)"
+    },
+    {
+      "src": "evenements/sonora-25-02.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (2/8)"
+    },
+    {
+      "src": "evenements/sonora-25-03.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (3/8)"
+    },
+    {
+      "src": "evenements/sonora-25-04.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (4/8)"
+    },
+    {
+      "src": "evenements/sonora-25-05.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (5/8)"
+    },
+    {
+      "src": "evenements/sonora-25-06.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (6/8)"
+    },
+    {
+      "src": "evenements/sonora-25-07.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (7/8)"
+    },
+    {
+      "src": "evenements/sonora-25-08.avif",
+      "label": "SONORA OCTOBRE 25",
+      "alt": "Soirée Sonora à Bordeaux, octobre 2025 — reportage en basse lumière (8/8)"
+    },
+    {
+      "src": "evenements/madame-loyal-sonora-01.avif",
+      "label": "MADAME LOYAL X SONORA 25",
+      "alt": "Madame Loyal au Sonora, Bordeaux, juin 2025 — photographie de concert (1/4)"
+    },
+    {
+      "src": "evenements/madame-loyal-sonora-02.avif",
+      "label": "MADAME LOYAL X SONORA 25",
+      "alt": "Madame Loyal au Sonora, Bordeaux, juin 2025 — photographie de concert (2/4)"
+    },
+    {
+      "src": "evenements/madame-loyal-sonora-03.avif",
+      "label": "MADAME LOYAL X SONORA 25",
+      "alt": "Madame Loyal au Sonora, Bordeaux, juin 2025 — photographie de concert (3/4)"
+    },
+    {
+      "src": "evenements/madame-loyal-sonora-04.avif",
+      "label": "MADAME LOYAL X SONORA 25",
+      "alt": "Madame Loyal au Sonora, Bordeaux, juin 2025 — photographie de concert (4/4)"
+    }
+  ],
+  "videos": []
+}
