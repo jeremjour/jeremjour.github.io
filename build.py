@@ -314,7 +314,7 @@ def page_albums_index(cfg):
     html += f'''
 {nav('albums', 2)}
 <section class="page">
-  <h1 class="page-title">Albums</h1>
+  <h1 class="sr-only">Albums</h1>
   <div class="album-grid">{''.join(cards)}</div>
 </section>
 {FOOTER}

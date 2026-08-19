@@ -41,8 +41,8 @@
     {
       "slug": "islande",
       "titre": "Islande",
-      "sous_titre": "Terres volcaniques et côtes de sable noir",
-      "description": "Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.",
+      "sous_titre": "Un tour d'Islande",
+      "description": "Photographies d'un tour d'Islande — volcans, cascades et côtes de sable noir. Au sol et par drone.",
       "couverture": "photos/islande/islande-drone-05.avif",
       "photos": [
         {
@@ -129,8 +129,8 @@
     {
       "slug": "montenegro",
       "titre": "Monténégro",
-      "sous_titre": "Baie de Kotor et parc du Durmitor",
-      "description": "Baie de Kotor, Perast et parc national du Durmitor. Architecture, reliefs et lumières du Monténégro.",
+      "sous_titre": "Autour de la baie de Kotor",
+      "description": "Photographies du Monténégro — baie de Kotor, Perast et parc national du Durmitor.",
       "couverture": "photos/notre-dame-du-rocher.avif",
       "photos": [
         {
