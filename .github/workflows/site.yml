@@ -1,0 +1,55 @@
+name: Générer le site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'photos/**'
+      - 'evenements/**'
+      - '!photos/thumbs/**'
+      - '!evenements/thumbs/**'
+      - 'site.config.json'
+      - 'src/base.html'
+      - 'build.py'
+      - 'thumbs.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer Pillow
+        run: pip install --quiet "pillow>=11"
+
+      - name: Générer les vignettes
+        run: python3 thumbs.py
+
+      - name: Générer les pages
+        run: python3 build.py
+
+      - name: Publier
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Rien à publier."
+          else
+            git commit -m "build: vignettes et pages régénérées [skip ci]"
+            git push
+          fi
