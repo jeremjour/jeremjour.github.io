@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islande — Albums | Jérém</title>
+<meta name="description" content="Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.">
+<meta name="author" content="Jérém — @jeremjour">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jeremjour.com/albums/islande/">
+<meta property="og:title" content="Islande — Albums | Jérém">
+<meta property="og:description" content="Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.">
+<meta property="og:image" content="https://jeremjour.com/preview.jpg">
+<meta property="og:url" content="https://jeremjour.com/albums/islande/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Jérém — Photographie & Nature">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Islande — Albums | Jérém">
+<meta name="twitter:description" content="Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.">
+<meta name="twitter:image" content="https://jeremjour.com/preview.jpg">
+<meta name="geo.region" content="FR-NAQ">
+<meta name="geo.placename" content="Bordeaux, Nouvelle-Aquitaine">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff; --bg2: #f8f8f6;
+  --text: #111110; --muted: #999995;
+  --border: #e8e8e4; --hover: #f2f2ef;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; overflow-x: hidden; }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 0 3rem; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif; font-weight: 400;
+  font-size: 1.6rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--text); text-decoration: none;
+}
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: 'Oswald', sans-serif; font-weight: 300;
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; cursor: pointer;
+  transition: color 0.3s; padding-bottom: 2px; border-bottom: 1px solid transparent;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); border-bottom-color: var(--text); }
+section { padding: 1rem 3rem 3rem; margin-top: 64px; }
+section.hidden { display: none; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+.gallery-item { position: relative; cursor: pointer; overflow: hidden; }
+.gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item img { -webkit-user-drag: none; user-drag: none; }
+.gallery-item-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+  transition: background 0.4s; display: flex; align-items: flex-end; padding: 1rem;
+  user-select: none; -webkit-user-select: none;
+}
+.gallery-item:hover .gallery-item-overlay { background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0) 100%); }
+.gallery-label {
+  font-family: 'Oswald', sans-serif; font-weight: 400;
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #fff; opacity: 0; transform: translateY(6px); transition: all 0.3s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.gallery-item:hover .gallery-label { opacity: 1; transform: translateY(0); }
+#videos { background: var(--bg); }
+.video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+.video-item { break-inside: avoid; margin-bottom: 5px; position: relative; overflow: hidden; cursor: pointer; width: 100%; }
+.video-item.portrait { aspect-ratio: 9/16; }
+.video-item.landscape { aspect-ratio: 16/9; }
+.video-item.portrait .video-inner, .video-item.landscape .video-inner { position: absolute; inset: 0; }
+@media (max-width: 900px) { .video-grid { columns: 2; } }
+@media (max-width: 600px) { .video-grid { columns: 2; } }
+.video-item:hover .video-play { background: var(--text); }
+.video-item:hover .video-play svg { fill: #fff; }
+.video-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; background: var(--bg2); transition: background 0.3s; }
+.video-item:hover .video-inner { background: var(--hover); }
+.video-play { width: 44px; height: 44px; border: 1px solid var(--text); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+.video-play svg { fill: var(--text); margin-left: 3px; transition: fill 0.3s; }
+.video-label { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 0 0.8rem; }
+.contact-inner { max-width: 100%; }
+.contact-hero { position: relative; width: 100%; min-height: 360px; margin-bottom: 0; overflow: hidden; display: flex; align-items: flex-end; padding: 2.5rem; background: var(--bg2); }
+.contact-hero-bg { position: absolute; inset: 0; background-image: url('contact-bg.jpg'); background-size: cover; background-position: top; transition: transform 0.8s ease; }
+.contact-hero:hover .contact-hero-bg { transform: scale(1.02); }
+.contact-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, transparent 100%); }
+.contact-tagline { position: relative; z-index: 2; font-family: 'Oswald', sans-serif; font-style: normal; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.4rem); letter-spacing: 0.04em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+@media (max-width: 600px) { .contact-hero { min-height: 240px; padding: 1.5rem; } }
+.contact-icons { display: flex; gap: 1.8rem; margin-top: 1.2rem; justify-content: center; }
+.contact-icon { color: var(--muted); transition: color 0.3s, transform 0.3s; display: flex; }
+.contact-icon:hover { color: var(--text); transform: translateY(-2px); }
+footer { padding: 1.8rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.lightbox { position: fixed; inset: 0; background: rgba(255,255,255,0.97); z-index: 500; display: none; align-items: center; justify-content: center; flex-direction: row; touch-action: none; }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; display: block; }
+.lightbox-img-wrap { position: relative; display: inline-flex; max-width: 90vw; max-height: 90vh; transition: transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.3s ease; will-change: transform, opacity; }
+.lightbox-img-wrap img { max-width: 100%; max-height: 90vh; object-fit: contain; transition: none; }
+.lightbox-img-wrap img.loading { filter: blur(8px); }
+.lightbox-caption { position: absolute; bottom: 12px; left: 14px; font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: #fff; pointer-events: none; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+.lightbox-counter { position: absolute; top: 1.5rem; left: 2rem; font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.lightbox-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; font-family: 'Oswald', sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); cursor: pointer; transition: color 0.3s; }
+.lightbox-close:hover { color: var(--text); }
+.video-lightbox { display: none; position: fixed; inset: 0; z-index: 600; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+.video-lightbox.active { display: flex; }
+.video-lightbox-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.2rem; cursor: pointer; z-index: 2; transition: color 0.2s; }
+.video-lightbox-close:hover { color: #fff; }
+.video-lightbox-inner { position: relative; width: 90vw; max-width: 860px; }
+.video-lightbox-inner.portrait { width: min(calc(85vh * 9 / 16), 90vw); max-width: 420px; }
+.video-lightbox-ratio { position: relative; width: 100%; padding-bottom: 56.25%; }
+.video-lightbox-ratio.portrait { padding-bottom: 177.78%; }
+.video-lightbox-ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 900px) { nav { padding: 0 1.5rem; } section { padding: 0.8rem 1.5rem 2.5rem; } .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; } footer { padding: 1.5rem; } }
+@media (max-width: 600px) { nav { padding: 0 1rem; height: 56px; } .nav-logo { font-size: 1.1rem; } .nav-links { display: none; } section { padding: 0.5rem 1rem 2rem; margin-top: 56px; } .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 3px; } .video-grid { columns: 1; } footer { padding: 1.2rem 1rem; flex-direction: column; gap: 0.5rem; text-align: center; } }
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 32px; height: 32px; cursor: pointer; background: none; border: none; padding: 0; flex-shrink: 0; }
+.nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text); transition: all 0.25s ease; }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); z-index: 199; }
+.nav-mobile-menu.open { display: block; }
+.nav-mobile-menu li { list-style: none; border-bottom: 1px solid var(--border); }
+.nav-mobile-menu li:last-child { border-bottom: none; }
+.nav-mobile-menu a { display: block; padding: 1rem 1.5rem; font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); text-decoration: none; cursor: pointer; transition: color 0.2s, padding-left 0.2s; }
+.nav-mobile-menu a:hover { color: var(--text); padding-left: 2rem; }
+.nav-mobile-menu a.active { color: var(--text); }
+@media (max-width: 600px) { .nav-hamburger { display: flex; } }
+.about { max-width: 820px; margin: 3.5rem auto 0; padding: 0 0.5rem; }
+.about h3 { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+.about p { font-family: 'Lora', serif; font-size: 0.92rem; line-height: 1.85; color: #45443f; margin-bottom: 1rem; }
+.about p strong { font-weight: 400; color: var(--text); }
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2.6rem 0 0; }
+.service h4 { font-family: 'Oswald', sans-serif; font-weight: 400; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); margin-bottom: 0.55rem; }
+.service p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.8rem; line-height: 1.7; color: var(--muted); }
+.gear { margin-top: 2.6rem; padding-top: 1.4rem; border-top: 1px solid var(--border); font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.74rem; letter-spacing: 0.02em; line-height: 1.9; color: var(--muted); }
+.gear span { color: var(--text); }
+@media (max-width: 720px) {
+  .services { grid-template-columns: 1fr; gap: 1.6rem; }
+  .about { margin-top: 2.4rem; }
+  }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* ---- pages albums ---- */
+.page { padding: 3rem 3rem 4rem; max-width: 1500px; margin: 0 auto; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2rem,5vw,3.2rem); letter-spacing: 0.04em; color: var(--text); margin-bottom: 0.3rem; }
+.page-sub { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.78rem; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2.6rem; }
+.album-grid + .page-sub, .page-title + .gallery-grid { margin-top: 2rem; }
+.back-link { display: inline-block; font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 1.6rem; transition: color 0.3s; }
+.back-link:hover { color: var(--text); }
+.album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2.4rem 1.6rem; margin-top: 2.4rem; }
+.album-card { text-decoration: none; display: block; }
+.album-cover { overflow: hidden; background: var(--border); aspect-ratio: 3/4; }
+.album-cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(.2,.8,.2,1), filter 0.5s; }
+.album-card:hover .album-cover img { transform: scale(1.04); filter: brightness(0.94); }
+.album-meta { padding-top: 0.9rem; }
+.album-meta h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.2rem; letter-spacing: 0.05em; color: var(--text); margin-bottom: 0.25rem; }
+.album-sub { display: block; font-family: 'Lora', serif; font-style: italic; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.35rem; }
+.album-count { display: block; font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.empty-note { grid-column: 1/-1; padding: 4rem 0; text-align: center; font-family: 'Oswald', sans-serif; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--border); }
+@media (max-width: 700px) {
+  .page { padding: 2rem 1rem 3rem; }
+  .album-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 0.8rem; }
+  .album-meta h2 { font-size: 1rem; }
+  .album-sub { font-size: 0.72rem; }
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WFVGB31J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R3WFVGB31J');</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Jerem</a>
+  <ul class="nav-links"><li><a href="/albums/" id="tab-albums" class="active">Albums</a></li><li><a href="/#videos" id="tab-videos">Vidéos</a></li><li><a href="/#evenements" id="tab-evenements">Événements</a></li><li><a href="/#contact" id="tab-contact">Contact</a></li></ul>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<ul class="nav-mobile-menu" id="nav-mobile-menu"><li><a href="/albums/" id="mob-tab-albums" class="active">Albums</a></li><li><a href="/#videos" id="mob-tab-videos">Vidéos</a></li><li><a href="/#evenements" id="mob-tab-evenements">Événements</a></li><li><a href="/#contact" id="mob-tab-contact">Contact</a></li></ul>
+<section class="page">
+  <a class="back-link" href="/albums/">← Albums</a>
+  <h1 class="page-title">Islande</h1>
+  <p class="page-sub">Terres volcaniques et côtes de sable noir · 8 photos</p>
+  <div class="gallery-grid"><div class="gallery-item" onclick="openLightbox(0,GAL)"><img src="/photos/thumbs/islande-drone-01.avif" alt="Côte de sable noir et ressac vus du ciel, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(1,GAL)"><img src="/photos/thumbs/islande-drone-02.avif" alt="Champ de lave et fumerolles volcaniques, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(2,GAL)"><img src="/photos/thumbs/islande-drone-04.avif" alt="Rivière glaciaire en tresses vue au drone, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(3,GAL)"><img src="/photos/thumbs/islande-drone-05.avif" alt="Plage de sable noir et écume, vue aérienne, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(4,GAL)"><img src="/photos/thumbs/islande-drone-06.avif" alt="Toundra aux couleurs d'automne et relief volcanique, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(5,GAL)"><img src="/photos/thumbs/islande-sol-01.avif" alt="Cascade de Goðafoss et brume, Islande" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(6,GAL)"><img src="/photos/thumbs/islande-sol-02.avif" alt="Fjord islandais sous un ciel bas" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div><div class="gallery-item" onclick="openLightbox(7,GAL)"><img src="/photos/thumbs/islande-sol-03.avif" alt="Panorama de montagnes islandaises depuis le sol" width="500" height="667" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-label">Islande</span></div></div></div>
+</section>
+<footer>
+  <span>© 2026 Jérém</span>
+  <span>Photographie &amp; Vidéographie</span>
+</footer>
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
+  <span class="lightbox-counter" id="lightbox-counter"></span>
+  <div class="lightbox-imgwrap" onclick="lightboxClickNav(event)"><img id="lightbox-img" alt=""></div>
+  <span class="lightbox-caption" id="lightbox-caption"></span>
+</div>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "ImageGallery",
+ "name": "Islande",
+ "description": "Paysages volcaniques, cascades et côtes de sable noir d'Islande. Prises de vue au drone et au sol.",
+ "url": "https://jeremjour.com/albums/islande/",
+ "image": [
+  "https://jeremjour.com/photos/islande/islande-drone-01.avif",
+  "https://jeremjour.com/photos/islande/islande-drone-02.avif",
+  "https://jeremjour.com/photos/islande/islande-drone-04.avif",
+  "https://jeremjour.com/photos/islande/islande-drone-05.avif",
+  "https://jeremjour.com/photos/islande/islande-drone-06.avif",
+  "https://jeremjour.com/photos/islande/islande-sol-01.avif",
+  "https://jeremjour.com/photos/islande/islande-sol-02.avif",
+  "https://jeremjour.com/photos/islande/islande-sol-03.avif"
+ ]
+}</script>
+<script>
+const GAL=[{"src": "photos/islande/islande-drone-01.avif", "label": "Islande", "alt": "Côte de sable noir et ressac vus du ciel, Islande"}, {"src": "photos/islande/islande-drone-02.avif", "label": "Islande", "alt": "Champ de lave et fumerolles volcaniques, Islande"}, {"src": "photos/islande/islande-drone-04.avif", "label": "Islande", "alt": "Rivière glaciaire en tresses vue au drone, Islande"}, {"src": "photos/islande/islande-drone-05.avif", "label": "Islande", "alt": "Plage de sable noir et écume, vue aérienne, Islande"}, {"src": "photos/islande/islande-drone-06.avif", "label": "Islande", "alt": "Toundra aux couleurs d'automne et relief volcanique, Islande"}, {"src": "photos/islande/islande-sol-01.avif", "label": "Islande", "alt": "Cascade de Goðafoss et brume, Islande"}, {"src": "photos/islande/islande-sol-02.avif", "label": "Islande", "alt": "Fjord islandais sous un ciel bas"}, {"src": "photos/islande/islande-sol-03.avif", "label": "Islande", "alt": "Panorama de montagnes islandaises depuis le sol"}];
+
+function toggleMobileMenu(){var b=document.getElementById('nav-hamburger'),m=document.getElementById('nav-mobile-menu');b.classList.toggle('open');m.classList.toggle('open');}
+function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
+var lbIdx=0,activeGal=[];
+function lbl(p){return p.label||'';}
+function updateCtr(){document.getElementById('lightbox-counter').textContent=(lbIdx+1)+' / '+activeGal.length;}
+function preload(i){[(i-1+activeGal.length)%activeGal.length,(i+1)%activeGal.length].forEach(function(j){var x=new Image();x.src='/'+activeGal[j].src;});}
+function openLightbox(i,gal){activeGal=gal||activeGal;lbIdx=i;var p=activeGal[i];document.getElementById('lightbox-img').src='/'+p.src;document.getElementById('lightbox-img').alt=p.alt||'';document.getElementById('lightbox-caption').textContent=lbl(p);updateCtr();preload(i);document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function lightboxNav(d){if(!activeGal.length)return;var w=document.getElementById('lightbox-img').parentElement;lbIdx=(lbIdx+d+activeGal.length)%activeGal.length;var p=activeGal[lbIdx];document.getElementById('lightbox-img').src='/'+p.src;document.getElementById('lightbox-img').alt=p.alt||'';document.getElementById('lightbox-caption').textContent=lbl(p);updateCtr();preload(lbIdx);w.style.transition='none';w.style.transform='';w.style.opacity='';}
+function lightboxClickNav(e){lightboxNav(e.offsetX<e.currentTarget.offsetWidth/2?-1:1);}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')lightboxNav(1);if(e.key==='ArrowLeft')lightboxNav(-1);});
+(function(){var lb=document.getElementById('lightbox');if(!lb)return;var w=document.getElementById('lightbox-img').parentElement,sx=0,sy=0,ax=null;
+lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;ax=null;w.style.transition='none';},{passive:true});
+lb.addEventListener('touchmove',function(e){var dx=e.touches[0].clientX-sx,dy=e.touches[0].clientY-sy;if(!ax&&(Math.abs(dx)>8||Math.abs(dy)>8))ax=Math.abs(dx)>Math.abs(dy)?'x':'y';if(ax==='x'){w.style.transform='translateX('+dx+'px)';w.style.opacity=String(Math.max(.3,1-Math.abs(dx)/(window.innerWidth*.8)));}else if(ax==='y'){w.style.transform='translateY('+dy*.4+'px)';w.style.opacity=String(Math.max(.3,1-Math.abs(dy)/300));}},{passive:true});
+lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;w.style.transition='';if(ax==='x'&&Math.abs(dx)>60){lightboxNav(dx<0?1:-1);}else if(ax==='y'&&Math.abs(dy)>90){closeLightbox();}w.style.transform='';w.style.opacity='';},{passive:true});})();
+
+activeGal=GAL;
+</script>
+</body>
+</html>
