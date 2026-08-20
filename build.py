@@ -256,6 +256,7 @@ def page_accueil(cfg):
 </section>
 
 {CONTACT_SECTION}
+{FORM_MODAL}
 {FOOTER}
 {LIGHTBOX}
 <div class="video-lightbox" id="video-lightbox">
@@ -374,6 +375,12 @@ def main():
     CSS = re.search(r'<style>(.*?)</style>', base, re.DOTALL).group(1)
     m = re.search(r'<section id="contact".*?</section>', base, re.DOTALL)
     CONTACT_SECTION = m.group(0)
+    # formulaire : bloc delimite par des marqueurs dans base.html
+    global FORM_MODAL
+    FORM_MODAL = ''
+    fm = re.search(r'<!--FORM_START-->(.*?)<!--FORM_END-->', base, re.DOTALL)
+    if fm:
+        FORM_MODAL = fm.group(1).replace('FORMSPREE_ID', cfg['site'].get('formspree', ''))
 
     total_photos = sum(len(a['photos']) for a in cfg['albums'])
     print(f"Config : {len(cfg['albums'])} albums, {total_photos} photos, "
