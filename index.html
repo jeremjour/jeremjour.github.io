@@ -270,16 +270,16 @@ footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.
 
       <div class="services">
         <div class="service">
-          <h4>Nature &amp; paysage</h4>
+          <h4>Nature / paysage</h4>
           <p>Un relief, une lumière, et j'ai envie de m'arrêter. Les Pyrénées et le Sud-Ouest, photographiés au sol comme depuis le ciel.</p>
         </div>
         <div class="service">
           <h4>Événementiel</h4>
-          <p>Reportage de soirées, festivals et événements privés. Prises de vue discrètes en basse lumière, sans flash.</p>
+          <p>Des soirées, des festivals, des concerts. Je shoote en basse lumière, sans flash : personne ne me voit passer.</p>
         </div>
         <div class="service">
-          <h4>Immobilier &amp; tourisme</h4>
-          <p>Sur demande : mise en valeur de biens, domaines, hôtels et campings. Prises de vue au sol et par drone pour sites web et brochures.</p>
+          <h4>Immobilier / tourisme</h4>
+          <p>Sur demande. Un bien, un domaine, un hôtel à mettre en valeur : je m'en occupe, au sol et par drone, pour vos sites et brochures.</p>
         </div>
       </div>
 
@@ -331,8 +331,8 @@ footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.
           <input id="f-lieu" name="Lieu" type="text" placeholder="Bordeaux, Pyrénées…" required>
         </div>
         <div class="field">
-          <label for="f-date">Période <span class="opt">(facultatif)</span></label>
-          <input id="f-date" name="Période" type="text" placeholder="Juin 2026, à définir…">
+          <label for="f-date">Période</label>
+          <input id="f-date" name="Période" type="text" placeholder="Printemps prochain, à définir…">
         </div>
       </div>
       <div class="field">
@@ -345,7 +345,7 @@ footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.
           <input id="f-nom" name="Nom" type="text" autocomplete="name" required>
         </div>
         <div class="field">
-          <label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label>
+          <label for="f-tel">Téléphone</label>
           <input id="f-tel" name="Téléphone" type="tel" autocomplete="tel">
         </div>
       </div>
@@ -370,7 +370,7 @@ footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.
 </div>
 <script>
 function openForm(){document.getElementById('form-modal').classList.add('active');document.body.style.overflow='hidden';setTimeout(function(){var e=document.getElementById('f-type');if(e)e.focus();},80);}
-function closeForm(){document.getElementById('form-modal').classList.remove('active');document.body.style.overflow='';}
+function closeForm(){document.getElementById('form-modal').classList.remove('active');document.body.style.overflow='';if(location.hash==='#projet'){history.replaceState(null,'','#contact');}}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('form-modal').classList.contains('active'))closeForm();});
 (function(){
   var f=document.getElementById('contact-form');if(!f)return;
@@ -387,7 +387,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.ge
     data.append('_subject','Nouvelle demande — jeremjour.com');
     fetch('https://formspree.io/f/maewazkq',{method:'POST',body:data,headers:{'Accept':'application/json'}})
       .then(function(r){
-        if(r.ok){f.style.display='none';document.getElementById('form-ok').classList.add('show');}
+        if(r.ok){f.style.display='none';document.getElementById('form-ok').classList.add('show');if(location.hash==='#projet'){history.replaceState(null,'','#contact');}}
         else{return r.json().then(function(d){throw new Error((d.errors&&d.errors[0]&&d.errors[0].message)||'Erreur');});}
       })
       .catch(function(){
