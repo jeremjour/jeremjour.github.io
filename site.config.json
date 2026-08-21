@@ -43,7 +43,7 @@
       "slug": "islande",
       "titre": "Islande",
       "sous_titre": "Un tour d'Islande",
-      "description": "Photographies d'un tour d'Islande — volcans, cascades et côtes de sable noir. Au sol et par drone.",
+      "description": "Photographies d'un tour d'Islande : volcans, cascades, rivières glaciaires et côtes de sable noir. Prises de vue au sol et par drone.",
       "couverture": "photos/islande/islande-drone-05.avif",
       "photos": [
         {
@@ -86,13 +86,14 @@
           "label": "Islande",
           "alt": "Panorama de montagnes islandaises depuis le sol"
         }
-      ]
+      ],
+      "titre_page": "Islande vue du sol et du ciel — Jérém"
     },
     {
       "slug": "saint-lary",
       "titre": "Saint-Lary",
       "sous_titre": "Hautes-Pyrénées",
-      "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photo et vidéo, au sol comme depuis le ciel.",
+      "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photographies de montagne au sol et vues aériennes par drone.",
       "couverture": "photos/saint-lary/saint-lary-01.avif",
       "photos": [
         {
@@ -125,13 +126,14 @@
           "label": "Saint-Lary",
           "alt": "Panorama des Pyrénées depuis Saint-Lary"
         }
-      ]
+      ],
+      "titre_page": "Saint-Lary, Hautes-Pyrénées — Photographie drone | Jérém"
     },
     {
       "slug": "montenegro",
       "titre": "Monténégro",
       "sous_titre": "Autour de la baie de Kotor",
-      "description": "Photographies du Monténégro — baie de Kotor, Perast et parc national du Durmitor.",
+      "description": "Photographies du Monténégro : baie de Kotor, village de Perast, île Saint-Georges et parc national du Durmitor. Pierre, eau et montagne.",
       "couverture": "photos/notre-dame-du-rocher.avif",
       "photos": [
         {
@@ -174,13 +176,14 @@
           "label": "Vieille ville de Kotor",
           "alt": "Toits de la vieille ville fortifiée de Kotor"
         }
-      ]
+      ],
+      "titre_page": "Monténégro, baie de Kotor — Photographie | Jérém"
     },
     {
       "slug": "croatie",
       "titre": "Croatie",
       "sous_titre": "Dubrovnik",
-      "description": "Remparts, ruelles et toits de tuiles de Dubrovnik face à l'Adriatique.",
+      "description": "Photographies de Dubrovnik : remparts, ruelles en escalier et toits de tuiles de la vieille ville face à la mer Adriatique.",
       "couverture": "photos/dubrovnik.avif",
       "photos": [
         {
@@ -203,7 +206,8 @@
           "label": "Dubrovnik vu du ciel",
           "alt": "Vue aérienne de la vieille ville de Dubrovnik et de la mer Adriatique"
         }
-      ]
+      ],
+      "titre_page": "Dubrovnik, Croatie — Photographie | Jérém"
     }
   ],
   "evenements": [

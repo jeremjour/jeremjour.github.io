@@ -147,7 +147,7 @@ def head(cfg, titre, desc, canonical, extra_css=''):
 
 
 FOOTER = '''<footer>
-  <span>© 2026 Jérém</span>
+  <span>© <span id="year">2026</span> Jérém</span>
   <span>Photographie &amp; Vidéographie</span>
 </footer>'''
 
@@ -161,6 +161,7 @@ LIGHTBOX = '''<div class="lightbox" id="lightbox">
 
 
 JS_COMMON = '''
+(function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
 function toggleMobileMenu(){var b=document.getElementById('nav-hamburger'),m=document.getElementById('nav-mobile-menu');b.classList.toggle('open');m.classList.toggle('open');}
 function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
 var lbIdx=0,activeGal=[];
@@ -287,8 +288,14 @@ function sectionFromHash(){{var h=(location.hash||'').replace('#','');return sec
 function openVideoLightbox(id,item){{if(!id)return;var ip=item.classList.contains('portrait'),inn=document.getElementById('vlb-inner'),rat=document.getElementById('vlb-ratio'),ifr=document.getElementById('vlb-iframe');inn.className='video-lightbox-inner'+(ip?' portrait':'');rat.className='video-lightbox-ratio'+(ip?' portrait':'');ifr.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1';document.getElementById('video-lightbox').classList.add('active');document.body.style.overflow='hidden';}}
 function closeVideoLightbox(){{document.getElementById('video-lightbox').classList.remove('active');document.getElementById('vlb-iframe').src='';document.body.style.overflow='';}}
 document.addEventListener('keydown',function(e){{if(e.key==='Escape')closeVideoLightbox();}});
-(function(){{var st=sectionFromHash();showSection(st,false);
-document.querySelectorAll('#'+st+' .reveal').forEach(function(el,i){{setTimeout(function(){{el.classList.add('visible');}},100+i*60);}});}})();
+(function(){{
+  var h=(location.hash||'').replace('#','');
+  var direct=(h==='projet');
+  var st=direct?'contact':sectionFromHash();
+  showSection(st,false);
+  document.querySelectorAll('#'+st+' .reveal').forEach(function(el,i){{setTimeout(function(){{el.classList.add('visible');}},100+i*60);}});
+  if(direct&&typeof openForm==='function'){{setTimeout(openForm,350);}}
+}})();
 window.addEventListener('popstate',function(){{showSection(sectionFromHash(),false);}});
 (function(){{var u='jeremjour.drone',d='gmail.com';['email-link','email-link-2'].forEach(function(id){{var a=document.getElementById(id);if(a)a.href='mailto:'+u+'@'+d;}});}})();
 </script>
@@ -305,7 +312,7 @@ def page_albums_index(cfg):
       <div class="album-cover"><img src="/{thumb(a['couverture'])}" alt="{esc(a['titre'])} — {esc(a['sous_titre'])}" width="500" height="667" loading="lazy"></div>
       <div class="album-meta"><h2>{esc(a['titre'])}</h2><span class="album-sub">{esc(a['sous_titre'])}</span><span class="album-count">{len(a['photos'])} photos</span></div>
     </a>''')
-    desc = "Albums photo de Jérém — Islande, Pyrénées, Monténégro, Croatie. Paysages et nature, au sol et par drone."
+    desc = "Albums photo de Jérém : Islande, Hautes-Pyrénées, Monténégro et Croatie. Paysages, reliefs et lumières, au sol comme par drone."
     schema = {"@context": "https://schema.org", "@type": "CollectionPage",
               "name": "Albums", "description": desc, "url": s['url'] + '/albums/',
               "hasPart": [{"@type": "ImageGallery", "name": a['titre'],
@@ -328,7 +335,7 @@ def page_albums_index(cfg):
 
 def page_album(cfg, a):
     s = cfg['site']
-    titre = f"{a['titre']} — Albums | Jérém"
+    titre = a.get('titre_page') or f"{a['titre']} — Albums | Jérém"
     schema = {"@context": "https://schema.org", "@type": "ImageGallery",
               "name": a['titre'], "description": a['description'],
               "url": f"{s['url']}/albums/{a['slug']}/",
