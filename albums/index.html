@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Albums — Jérém | jeremjour.com</title>
-<meta name="description" content="Albums photo de Jérém — Islande, Pyrénées, Monténégro, Croatie. Paysages et nature, au sol et par drone.">
+<meta name="description" content="Albums photo de Jérém : Islande, Hautes-Pyrénées, Monténégro et Croatie. Paysages, reliefs et lumières, au sol comme par drone.">
 <meta name="author" content="Jérém — @jeremjour">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://jeremjour.com/albums/">
 <meta property="og:title" content="Albums — Jérém | jeremjour.com">
-<meta property="og:description" content="Albums photo de Jérém — Islande, Pyrénées, Monténégro, Croatie. Paysages et nature, au sol et par drone.">
+<meta property="og:description" content="Albums photo de Jérém : Islande, Hautes-Pyrénées, Monténégro et Croatie. Paysages, reliefs et lumières, au sol comme par drone.">
 <meta property="og:image" content="https://jeremjour.com/preview.jpg">
 <meta property="og:url" content="https://jeremjour.com/albums/">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Jérém — Photographie & Nature">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Albums — Jérém | jeremjour.com">
-<meta name="twitter:description" content="Albums photo de Jérém — Islande, Pyrénées, Monténégro, Croatie. Paysages et nature, au sol et par drone.">
+<meta name="twitter:description" content="Albums photo de Jérém : Islande, Hautes-Pyrénées, Monténégro et Croatie. Paysages, reliefs et lumières, au sol comme par drone.">
 <meta name="twitter:image" content="https://jeremjour.com/preview.jpg">
 <meta name="geo.region" content="FR-NAQ">
 <meta name="geo.placename" content="Bordeaux, Nouvelle-Aquitaine">
@@ -248,43 +248,44 @@ footer span { font-family: 'Oswald', sans-serif; font-weight: 300; font-size: 0.
     </a></div>
 </section>
 <footer>
-  <span>© 2026 Jérém</span>
+  <span>© <span id="year">2026</span> Jérém</span>
   <span>Photographie &amp; Vidéographie</span>
 </footer>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "CollectionPage",
  "name": "Albums",
- "description": "Albums photo de Jérém — Islande, Pyrénées, Monténégro, Croatie. Paysages et nature, au sol et par drone.",
+ "description": "Albums photo de Jérém : Islande, Hautes-Pyrénées, Monténégro et Croatie. Paysages, reliefs et lumières, au sol comme par drone.",
  "url": "https://jeremjour.com/albums/",
  "hasPart": [
   {
    "@type": "ImageGallery",
    "name": "Islande",
-   "description": "Photographies d'un tour d'Islande — volcans, cascades et côtes de sable noir. Au sol et par drone.",
+   "description": "Photographies d'un tour d'Islande : volcans, cascades, rivières glaciaires et côtes de sable noir. Prises de vue au sol et par drone.",
    "url": "https://jeremjour.com/albums/islande/"
   },
   {
    "@type": "ImageGallery",
    "name": "Saint-Lary",
-   "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photo et vidéo, au sol comme depuis le ciel.",
+   "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photographies de montagne au sol et vues aériennes par drone.",
    "url": "https://jeremjour.com/albums/saint-lary/"
   },
   {
    "@type": "ImageGallery",
    "name": "Monténégro",
-   "description": "Photographies du Monténégro — baie de Kotor, Perast et parc national du Durmitor.",
+   "description": "Photographies du Monténégro : baie de Kotor, village de Perast, île Saint-Georges et parc national du Durmitor. Pierre, eau et montagne.",
    "url": "https://jeremjour.com/albums/montenegro/"
   },
   {
    "@type": "ImageGallery",
    "name": "Croatie",
-   "description": "Remparts, ruelles et toits de tuiles de Dubrovnik face à l'Adriatique.",
+   "description": "Photographies de Dubrovnik : remparts, ruelles en escalier et toits de tuiles de la vieille ville face à la mer Adriatique.",
    "url": "https://jeremjour.com/albums/croatie/"
   }
  ]
 }</script>
 <script>
+(function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
 function toggleMobileMenu(){var b=document.getElementById('nav-hamburger'),m=document.getElementById('nav-mobile-menu');b.classList.toggle('open');m.classList.toggle('open');}
 function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
 var lbIdx=0,activeGal=[];
