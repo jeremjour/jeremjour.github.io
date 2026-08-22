@@ -244,6 +244,7 @@ def page_accueil(cfg):
 <section id="photos">
   <h1 class="sr-only">Jérém — Photographe &amp; Pilote Drone</h1>
   <div class="gallery-grid">{grid(sel, 'PHOTOS')}</div>
+  <div class="albums-cta"><a class="cta-albums" href="/albums/">Voir les albums</a></div>
 </section>
 
 <section id="videos" class="hidden">
