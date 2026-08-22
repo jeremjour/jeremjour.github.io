@@ -10,14 +10,14 @@
   "accueil": {
     "_note": "Selection affichee sur la page d'accueil. Reference les photos par leur chemin. L'ordre ici est l'ordre affiche.",
     "selection": [
-      "photos/ruelle-dans-perast.avif",
-      "photos/notre-dame-du-rocher.avif",
-      "photos/lac-noir-durmitor.avif",
-      "photos/port-de-kotor.avif",
-      "photos/ruelle-de-dubrovnik.avif",
-      "photos/eglise-saint-blaise-dubrovnik.avif",
-      "photos/dubrovnik-croatie.avif",
-      "photos/dubrovnik.avif",
+      "photos/montenegro/ruelle-dans-perast.avif",
+      "photos/montenegro/notre-dame-du-rocher.avif",
+      "photos/montenegro/lac-noir-durmitor.avif",
+      "photos/montenegro/port-de-kotor.avif",
+      "photos/croatie/ruelle-de-dubrovnik.avif",
+      "photos/croatie/eglise-saint-blaise-dubrovnik.avif",
+      "photos/croatie/dubrovnik-croatie.avif",
+      "photos/croatie/dubrovnik.avif",
       "photos/saint-lary/saint-lary-01.avif",
       "photos/saint-lary/saint-lary-04.avif",
       "photos/saint-lary/saint-lary-05.avif",
@@ -34,7 +34,7 @@
       "titre": "Monténégro",
       "sous_titre": "Autour de la baie de Kotor",
       "description": "Photographies du Monténégro : baie de Kotor, village de Perast, île Saint-Georges et parc national du Durmitor. Pierre, eau et montagne.",
-      "couverture": "photos/notre-dame-du-rocher.avif",
+      "couverture": "photos/montenegro/notre-dame-du-rocher.avif",
       "photos": [
         {
           "src": "photos/montenegro/montenegro-01.avif",
@@ -42,39 +42,59 @@
           "alt": "Baie et montagnes du Monténégro"
         },
         {
-          "src": "photos/ruelle-dans-perast.avif",
+          "src": "photos/montenegro/ruelle-dans-perast.avif",
           "label": "Perast",
           "alt": "Ruelle pavée de Perast au lever du soleil, baie de Kotor"
         },
         {
-          "src": "photos/notre-dame-du-rocher.avif",
+          "src": "photos/montenegro/vue-sur-perast.avif",
+          "label": "Perast",
+          "alt": "Vue sur le village de Perast, baie de Kotor, Monténégro"
+        },
+        {
+          "src": "photos/montenegro/notre-dame-du-rocher.avif",
           "label": "Notre-Dame-du-Rocher",
           "alt": "Église Notre-Dame-du-Rocher sur son îlot, baie de Kotor"
         },
         {
-          "src": "photos/ile-saint-george.avif",
+          "src": "photos/montenegro/ile-saint-george.avif",
           "label": "Île Saint-Georges",
           "alt": "Île Saint-Georges et son monastère bénédictin, Perast"
         },
         {
-          "src": "photos/lac-noir-durmitor.avif",
+          "src": "photos/montenegro/ile-saint-george-2.avif",
+          "label": "Île Saint-Georges",
+          "alt": "Seconde vue de l'île Saint-Georges, Perast, Monténégro"
+        },
+        {
+          "src": "photos/montenegro/lac-noir-durmitor.avif",
           "label": "Lac Noir",
           "alt": "Lac Noir et forêt de pins, parc national du Durmitor"
         },
         {
-          "src": "photos/chapelle.avif",
+          "src": "photos/montenegro/lac-du-durmitor.avif",
+          "label": "Lac Noir",
+          "alt": "Seconde vue du lac Noir, parc national du Durmitor"
+        },
+        {
+          "src": "photos/montenegro/chapelle.avif",
           "label": "Chapelle",
           "alt": "Chapelle isolée en pierre au-dessus de la baie, Monténégro"
         },
         {
-          "src": "photos/port-de-kotor.avif",
+          "src": "photos/montenegro/port-de-kotor.avif",
           "label": "Port de Kotor",
           "alt": "Port de Kotor et remparts vénitiens au crépuscule"
         },
         {
-          "src": "photos/vieille-ville-kotor.avif",
+          "src": "photos/montenegro/vieille-ville-kotor.avif",
           "label": "Vieille ville de Kotor",
           "alt": "Toits de la vieille ville fortifiée de Kotor"
+        },
+        {
+          "src": "photos/montenegro/vue-sur-kotor.avif",
+          "label": "Kotor",
+          "alt": "Vue d'ensemble sur Kotor et sa baie, Monténégro"
         }
       ],
       "titre_page": "Monténégro, baie de Kotor — Photographie | Jérém"
@@ -84,27 +104,37 @@
       "titre": "Croatie",
       "sous_titre": "Dubrovnik",
       "description": "Photographies de Dubrovnik : remparts, ruelles en escalier et toits de tuiles de la vieille ville face à la mer Adriatique.",
-      "couverture": "photos/dubrovnik.avif",
+      "couverture": "photos/croatie/dubrovnik.avif",
       "photos": [
         {
-          "src": "photos/ruelle-de-dubrovnik.avif",
+          "src": "photos/croatie/ruelle-de-dubrovnik.avif",
           "label": "Ruelle de Dubrovnik",
           "alt": "Ruelle en escalier de la vieille ville de Dubrovnik, Croatie"
         },
         {
-          "src": "photos/eglise-saint-blaise-dubrovnik.avif",
+          "src": "photos/croatie/eglise-saint-blaise-dubrovnik.avif",
           "label": "Église Saint-Blaise",
           "alt": "Église Saint-Blaise de style baroque, Dubrovnik, Croatie"
         },
         {
-          "src": "photos/dubrovnik-croatie.avif",
+          "src": "photos/croatie/eglise-dubrovnik.avif",
+          "label": "Église Saint-Blaise",
+          "alt": "Seconde vue de l'église Saint-Blaise, Dubrovnik, Croatie"
+        },
+        {
+          "src": "photos/croatie/dubrovnik-croatie.avif",
           "label": "Dubrovnik",
           "alt": "Remparts et toits de tuiles de Dubrovnik face à l'Adriatique"
         },
         {
-          "src": "photos/dubrovnik.avif",
+          "src": "photos/croatie/dubrovnik.avif",
           "label": "Dubrovnik vu du ciel",
           "alt": "Vue aérienne de la vieille ville de Dubrovnik et de la mer Adriatique"
+        },
+        {
+          "src": "photos/croatie/dubrovnik-02.avif",
+          "label": "Dubrovnik",
+          "alt": "Dubrovnik, Croatie"
         }
       ],
       "titre_page": "Dubrovnik, Croatie — Photographie | Jérém"
