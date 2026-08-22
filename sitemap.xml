@@ -13,7 +13,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeremjour.com/albums/islande/</loc>
+    <loc>https://jeremjour.com/albums/montenegro/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jeremjour.com/albums/croatie/</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -25,13 +31,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jeremjour.com/albums/montenegro/</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jeremjour.com/albums/croatie/</loc>
+    <loc>https://jeremjour.com/albums/islande/</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
