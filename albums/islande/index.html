@@ -250,8 +250,7 @@ img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; -
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
   <span class="lightbox-counter" id="lightbox-counter"></span>
-  <div class="lightbox-imgwrap" onclick="lightboxClickNav(event)"><img id="lightbox-img" alt=""></div>
-  <span class="lightbox-caption" id="lightbox-caption"></span>
+  <div class="lightbox-img-wrap" onclick="lightboxClickNav(event)"><img id="lightbox-img" alt=""><span class="lightbox-caption" id="lightbox-caption"></span></div>
 </div>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -277,6 +276,11 @@ const GAL=[{"src": "photos/islande/islande-drone-01.avif", "label": "Islande", "
 function toggleMobileMenu(){var b=document.getElementById('nav-hamburger'),m=document.getElementById('nav-mobile-menu');b.classList.toggle('open');m.classList.toggle('open');}
 function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
 var lbIdx=0,activeGal=[];
+(function(){
+  function estPhoto(e){var t=e.target;return t&&t.tagName==='IMG';}
+  document.addEventListener('contextmenu',function(e){if(estPhoto(e))e.preventDefault();});
+  document.addEventListener('dragstart',function(e){if(estPhoto(e))e.preventDefault();});
+})();
 function lbl(p){return p.label||'';}
 function updateCtr(){document.getElementById('lightbox-counter').textContent=(lbIdx+1)+' / '+activeGal.length;}
 function preload(i){[(i-1+activeGal.length)%activeGal.length,(i+1)%activeGal.length].forEach(function(j){var x=new Image();x.src='/'+activeGal[j].src;});}
