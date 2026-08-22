@@ -10,125 +10,25 @@
   "accueil": {
     "_note": "Selection affichee sur la page d'accueil. Reference les photos par leur chemin. L'ordre ici est l'ordre affiche.",
     "selection": [
-      "photos/islande/islande-drone-01.avif",
-      "photos/islande/islande-drone-02.avif",
-      "photos/islande/islande-drone-04.avif",
-      "photos/islande/islande-drone-05.avif",
-      "photos/islande/islande-drone-06.avif",
-      "photos/islande/islande-sol-01.avif",
-      "photos/islande/islande-sol-02.avif",
-      "photos/islande/islande-sol-03.avif",
-      "photos/saint-lary/saint-lary-01.avif",
-      "photos/saint-lary/saint-lary-02.avif",
-      "photos/saint-lary/saint-lary-03.avif",
-      "photos/saint-lary/saint-lary-04.avif",
-      "photos/saint-lary/saint-lary-05.avif",
-      "photos/saint-lary/saint-lary-06.avif",
-      "photos/montenegro/montenegro-01.avif",
       "photos/ruelle-dans-perast.avif",
       "photos/notre-dame-du-rocher.avif",
-      "photos/ile-saint-george.avif",
       "photos/lac-noir-durmitor.avif",
-      "photos/chapelle.avif",
       "photos/port-de-kotor.avif",
-      "photos/vieille-ville-kotor.avif",
       "photos/ruelle-de-dubrovnik.avif",
       "photos/eglise-saint-blaise-dubrovnik.avif",
       "photos/dubrovnik-croatie.avif",
-      "photos/dubrovnik.avif"
+      "photos/dubrovnik.avif",
+      "photos/saint-lary/saint-lary-01.avif",
+      "photos/saint-lary/saint-lary-04.avif",
+      "photos/saint-lary/saint-lary-05.avif",
+      "photos/saint-lary/saint-lary-06.avif",
+      "photos/islande/islande-drone-01.avif",
+      "photos/islande/islande-drone-04.avif",
+      "photos/islande/islande-sol-01.avif",
+      "photos/islande/islande-sol-03.avif"
     ]
   },
   "albums": [
-    {
-      "slug": "islande",
-      "titre": "Islande",
-      "sous_titre": "Un tour d'Islande",
-      "description": "Photographies d'un tour d'Islande : volcans, cascades, rivières glaciaires et côtes de sable noir. Prises de vue au sol et par drone.",
-      "couverture": "photos/islande/islande-drone-05.avif",
-      "photos": [
-        {
-          "src": "photos/islande/islande-drone-01.avif",
-          "label": "Islande",
-          "alt": "Côte de sable noir et ressac vus du ciel, Islande"
-        },
-        {
-          "src": "photos/islande/islande-drone-02.avif",
-          "label": "Islande",
-          "alt": "Champ de lave et fumerolles volcaniques, Islande"
-        },
-        {
-          "src": "photos/islande/islande-drone-04.avif",
-          "label": "Islande",
-          "alt": "Rivière glaciaire en tresses vue au drone, Islande"
-        },
-        {
-          "src": "photos/islande/islande-drone-05.avif",
-          "label": "Islande",
-          "alt": "Plage de sable noir et écume, vue aérienne, Islande"
-        },
-        {
-          "src": "photos/islande/islande-drone-06.avif",
-          "label": "Islande",
-          "alt": "Toundra aux couleurs d'automne et relief volcanique, Islande"
-        },
-        {
-          "src": "photos/islande/islande-sol-01.avif",
-          "label": "Islande",
-          "alt": "Cascade de Goðafoss et brume, Islande"
-        },
-        {
-          "src": "photos/islande/islande-sol-02.avif",
-          "label": "Islande",
-          "alt": "Fjord islandais sous un ciel bas"
-        },
-        {
-          "src": "photos/islande/islande-sol-03.avif",
-          "label": "Islande",
-          "alt": "Panorama de montagnes islandaises depuis le sol"
-        }
-      ],
-      "titre_page": "Islande vue du sol et du ciel — Jérém"
-    },
-    {
-      "slug": "saint-lary",
-      "titre": "Saint-Lary",
-      "sous_titre": "Hautes-Pyrénées",
-      "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photographies de montagne au sol et vues aériennes par drone.",
-      "couverture": "photos/saint-lary/saint-lary-01.avif",
-      "photos": [
-        {
-          "src": "photos/saint-lary/saint-lary-01.avif",
-          "label": "Saint-Lary",
-          "alt": "Sommets pyrénéens enneigés au-dessus de Saint-Lary"
-        },
-        {
-          "src": "photos/saint-lary/saint-lary-02.avif",
-          "label": "Saint-Lary",
-          "alt": "Vallée de Saint-Lary vue du ciel, Hautes-Pyrénées"
-        },
-        {
-          "src": "photos/saint-lary/saint-lary-03.avif",
-          "label": "Saint-Lary",
-          "alt": "Crêtes et reliefs pyrénéens, Saint-Lary"
-        },
-        {
-          "src": "photos/saint-lary/saint-lary-04.avif",
-          "label": "Saint-Lary",
-          "alt": "Versant de montagne au drone, Saint-Lary, Pyrénées"
-        },
-        {
-          "src": "photos/saint-lary/saint-lary-05.avif",
-          "label": "Saint-Lary",
-          "alt": "Paysage de haute montagne à Saint-Lary, Pyrénées"
-        },
-        {
-          "src": "photos/saint-lary/saint-lary-06.avif",
-          "label": "Saint-Lary",
-          "alt": "Panorama des Pyrénées depuis Saint-Lary"
-        }
-      ],
-      "titre_page": "Saint-Lary, Hautes-Pyrénées — Photographie drone | Jérém"
-    },
     {
       "slug": "montenegro",
       "titre": "Monténégro",
@@ -208,6 +108,96 @@
         }
       ],
       "titre_page": "Dubrovnik, Croatie — Photographie | Jérém"
+    },
+    {
+      "slug": "saint-lary",
+      "titre": "Saint-Lary",
+      "sous_titre": "Hautes-Pyrénées",
+      "description": "Sommets, vallées et lumières des Hautes-Pyrénées autour de Saint-Lary. Photographies de montagne au sol et vues aériennes par drone.",
+      "couverture": "photos/saint-lary/saint-lary-01.avif",
+      "photos": [
+        {
+          "src": "photos/saint-lary/saint-lary-01.avif",
+          "label": "Saint-Lary",
+          "alt": "Sommets pyrénéens enneigés au-dessus de Saint-Lary"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-02.avif",
+          "label": "Saint-Lary",
+          "alt": "Vallée de Saint-Lary vue du ciel, Hautes-Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-03.avif",
+          "label": "Saint-Lary",
+          "alt": "Crêtes et reliefs pyrénéens, Saint-Lary"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-04.avif",
+          "label": "Saint-Lary",
+          "alt": "Versant de montagne au drone, Saint-Lary, Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-05.avif",
+          "label": "Saint-Lary",
+          "alt": "Paysage de haute montagne à Saint-Lary, Pyrénées"
+        },
+        {
+          "src": "photos/saint-lary/saint-lary-06.avif",
+          "label": "Saint-Lary",
+          "alt": "Panorama des Pyrénées depuis Saint-Lary"
+        }
+      ],
+      "titre_page": "Saint-Lary, Hautes-Pyrénées — Photographie drone | Jérém"
+    },
+    {
+      "slug": "islande",
+      "titre": "Islande",
+      "sous_titre": "Un tour d'Islande",
+      "description": "Photographies d'un tour d'Islande : volcans, cascades, rivières glaciaires et côtes de sable noir. Prises de vue au sol et par drone.",
+      "couverture": "photos/islande/islande-drone-05.avif",
+      "photos": [
+        {
+          "src": "photos/islande/islande-drone-01.avif",
+          "label": "Islande",
+          "alt": "Côte de sable noir et ressac vus du ciel, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-02.avif",
+          "label": "Islande",
+          "alt": "Champ de lave et fumerolles volcaniques, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-04.avif",
+          "label": "Islande",
+          "alt": "Rivière glaciaire en tresses vue au drone, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-05.avif",
+          "label": "Islande",
+          "alt": "Plage de sable noir et écume, vue aérienne, Islande"
+        },
+        {
+          "src": "photos/islande/islande-drone-06.avif",
+          "label": "Islande",
+          "alt": "Toundra aux couleurs d'automne et relief volcanique, Islande"
+        },
+        {
+          "src": "photos/islande/islande-sol-01.avif",
+          "label": "Islande",
+          "alt": "Cascade de Goðafoss et brume, Islande"
+        },
+        {
+          "src": "photos/islande/islande-sol-02.avif",
+          "label": "Islande",
+          "alt": "Fjord islandais sous un ciel bas"
+        },
+        {
+          "src": "photos/islande/islande-sol-03.avif",
+          "label": "Islande",
+          "alt": "Panorama de montagnes islandaises depuis le sol"
+        }
+      ],
+      "titre_page": "Islande vue du sol et du ciel — Jérém"
     }
   ],
   "evenements": [
